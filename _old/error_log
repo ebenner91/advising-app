@@ -1,0 +1,356 @@
+[14-Apr-2016 16:00:59 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home/advisingapp/public_html/index.php on line 242
+[14-Apr-2016 16:02:56 America/Chicago] PHP Catchable fatal error:  Argument 1 passed to CourseModel::__construct() must be an instance of PDO, null given, called in /home/advisingapp/public_html/index.php on line 174 and defined in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 17
+[14-Apr-2016 16:08:12 America/Chicago] PHP Catchable fatal error:  Argument 1 passed to CourseModel::__construct() must be an instance of PDO, null given, called in /home/advisingapp/public_html/index.php on line 174 and defined in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 17
+[14-Apr-2016 16:08:58 America/Chicago] PHP Fatal error:  Call to undefined method CourseModel::getEventArchive() in /home/advisingapp/public_html/index.php on line 177
+[14-Apr-2016 16:10:25 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/advisingapp/public_html/index.php on line 189
+[19-Apr-2016 15:27:52 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/advisingapp/public_html/index.php on line 195
+[19-Apr-2016 15:28:42 America/Chicago] PHP Parse error:  syntax error, unexpected '' (T_ENCAPSED_AND_WHITESPACE), expecting identifier (T_STRING) or variable (T_VARIABLE) or number (T_NUM_STRING) in /home/advisingapp/public_html/index.php on line 196
+[19-Apr-2016 15:29:18 America/Chicago] PHP Parse error:  syntax error, unexpected ':', expecting ',' or ';' in /home/advisingapp/public_html/index.php on line 197
+[19-Apr-2016 15:47:27 America/Chicago] PHP Parse error:  syntax error, unexpected '/' in /home/advisingapp/public_html/index.php on line 193
+[19-Apr-2016 15:56:53 America/Chicago] PHP Parse error:  syntax error, unexpected '{', expecting ',' or ';' in /home/advisingapp/public_html/index.php on line 195
+[20-Apr-2016 16:13:04 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home/advisingapp/public_html/index.php on line 224
+[20-Apr-2016 16:53:08 America/Chicago] PHP Parse error:  syntax error, unexpected ')' in /home/advisingapp/public_html/index.php on line 122
+[20-Apr-2016 16:57:35 America/Chicago] PHP Parse error:  syntax error, unexpected 'portlet' (T_STRING), expecting ',' or ';' in /home/advisingapp/public_html/index.php on line 151
+[20-Apr-2016 16:58:32 America/Chicago] PHP Parse error:  syntax error, unexpected '<' in /home/advisingapp/public_html/index.php on line 143
+[25-Apr-2016 16:12:24 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/advisingapp/public_html/login.php:11) in /home/advisingapp/public_html/login.php on line 13
+[25-Apr-2016 16:12:24 America/Chicago] PHP Warning:  require(dependancies/php/dbcon.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/login.php on line 50
+[25-Apr-2016 16:12:24 America/Chicago] PHP Warning:  require(dependancies/php/dbcon.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/login.php on line 50
+[25-Apr-2016 16:12:24 America/Chicago] PHP Fatal error:  require(): Failed opening required 'dependancies/php/dbcon.php' (include_path='.:/opt/php54/lib/php') in /home/advisingapp/public_html/login.php on line 50
+[25-Apr-2016 16:14:07 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/advisingapp/public_html/login.php:11) in /home/advisingapp/public_html/login.php on line 13
+[25-Apr-2016 16:14:07 America/Chicago] PHP Warning:  require(dependancies/php/dbcon.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/login.php on line 50
+[25-Apr-2016 16:14:07 America/Chicago] PHP Warning:  require(dependancies/php/dbcon.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/login.php on line 50
+[25-Apr-2016 16:14:07 America/Chicago] PHP Fatal error:  require(): Failed opening required 'dependancies/php/dbcon.php' (include_path='.:/opt/php54/lib/php') in /home/advisingapp/public_html/login.php on line 50
+[25-Apr-2016 16:14:52 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/advisingapp/public_html/login.php:11) in /home/advisingapp/public_html/login.php on line 13
+[25-Apr-2016 16:14:52 America/Chicago] PHP Warning:  require(dependancies/php/dbcon.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/login.php on line 50
+[25-Apr-2016 16:14:52 America/Chicago] PHP Warning:  require(dependancies/php/dbcon.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/login.php on line 50
+[25-Apr-2016 16:14:52 America/Chicago] PHP Fatal error:  require(): Failed opening required 'dependancies/php/dbcon.php' (include_path='.:/opt/php54/lib/php') in /home/advisingapp/public_html/login.php on line 50
+[25-Apr-2016 16:15:48 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/advisingapp/public_html/login.php:11) in /home/advisingapp/public_html/login.php on line 13
+[25-Apr-2016 16:15:48 America/Chicago] PHP Warning:  require(dependancies/php/dbcon.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/login.php on line 50
+[25-Apr-2016 16:15:48 America/Chicago] PHP Warning:  require(dependancies/php/dbcon.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/login.php on line 50
+[25-Apr-2016 16:15:48 America/Chicago] PHP Fatal error:  require(): Failed opening required 'dependancies/php/dbcon.php' (include_path='.:/opt/php54/lib/php') in /home/advisingapp/public_html/login.php on line 50
+[25-Apr-2016 16:15:49 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/advisingapp/public_html/login.php:11) in /home/advisingapp/public_html/login.php on line 13
+[25-Apr-2016 16:15:49 America/Chicago] PHP Warning:  require(dependancies/php/dbcon.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/login.php on line 50
+[25-Apr-2016 16:15:49 America/Chicago] PHP Warning:  require(dependancies/php/dbcon.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/login.php on line 50
+[25-Apr-2016 16:15:49 America/Chicago] PHP Fatal error:  require(): Failed opening required 'dependancies/php/dbcon.php' (include_path='.:/opt/php54/lib/php') in /home/advisingapp/public_html/login.php on line 50
+[25-Apr-2016 16:21:05 America/Chicago] PHP Warning:  require(dependancies/php/dbcon.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/login.php on line 51
+[25-Apr-2016 16:21:05 America/Chicago] PHP Warning:  require(dependancies/php/dbcon.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/login.php on line 51
+[25-Apr-2016 16:21:05 America/Chicago] PHP Fatal error:  require(): Failed opening required 'dependancies/php/dbcon.php' (include_path='.:/opt/php54/lib/php') in /home/advisingapp/public_html/login.php on line 51
+[25-Apr-2016 16:23:04 America/Chicago] PHP Warning:  require(dependancies/models/VerifyModel.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/login.php on line 52
+[25-Apr-2016 16:23:04 America/Chicago] PHP Warning:  require(dependancies/models/VerifyModel.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/login.php on line 52
+[25-Apr-2016 16:23:04 America/Chicago] PHP Fatal error:  require(): Failed opening required 'dependancies/models/VerifyModel.php' (include_path='.:/opt/php54/lib/php') in /home/advisingapp/public_html/login.php on line 52
+[25-Apr-2016 16:23:06 America/Chicago] PHP Warning:  require(dependancies/models/VerifyModel.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/login.php on line 52
+[25-Apr-2016 16:23:06 America/Chicago] PHP Warning:  require(dependancies/models/VerifyModel.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/login.php on line 52
+[25-Apr-2016 16:23:06 America/Chicago] PHP Fatal error:  require(): Failed opening required 'dependancies/models/VerifyModel.php' (include_path='.:/opt/php54/lib/php') in /home/advisingapp/public_html/login.php on line 52
+[25-Apr-2016 16:24:03 America/Chicago] PHP Warning:  require(dependancies/models/VerifyModel.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/login.php on line 52
+[25-Apr-2016 16:24:03 America/Chicago] PHP Warning:  require(dependancies/models/VerifyModel.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/login.php on line 52
+[25-Apr-2016 16:24:03 America/Chicago] PHP Fatal error:  require(): Failed opening required 'dependancies/models/VerifyModel.php' (include_path='.:/opt/php54/lib/php') in /home/advisingapp/public_html/login.php on line 52
+[25-Apr-2016 16:24:10 America/Chicago] PHP Warning:  require(dependancies/models/VerifyModel.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/login.php on line 52
+[25-Apr-2016 16:24:10 America/Chicago] PHP Warning:  require(dependancies/models/VerifyModel.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/login.php on line 52
+[25-Apr-2016 16:24:10 America/Chicago] PHP Fatal error:  require(): Failed opening required 'dependancies/models/VerifyModel.php' (include_path='.:/opt/php54/lib/php') in /home/advisingapp/public_html/login.php on line 52
+[25-Apr-2016 16:25:02 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'advising_app.users' doesn't exist' in /home/advisingapp/public_html/dependancies/models/LoginModel.php:26
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/LoginModel.php(26): PDOStatement->execute()
+#1 /home/advisingapp/public_html/login.php(69): LoginModel->verifyCredentials('sking', 'Un1f0rm64@1')
+#2 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/LoginModel.php on line 26
+[25-Apr-2016 16:27:55 America/Chicago] PHP Fatal error:  Call to undefined function loginDatabase() in /home/advisingapp/public_html/login.php on line 62
+[25-Apr-2016 16:28:52 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home/advisingapp/public_html/dependancies/db/dbcon.php on line 65
+[25-Apr-2016 16:29:37 America/Chicago] PHP Fatal error:  Call to undefined function loginDatabase() in /home/advisingapp/public_html/login.php on line 62
+[25-Apr-2016 16:29:42 America/Chicago] PHP Fatal error:  Call to undefined function loginDatabase() in /home/advisingapp/public_html/login.php on line 62
+[25-Apr-2016 16:30:30 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home/advisingapp/public_html/dependancies/db/dbcon.php on line 65
+[25-Apr-2016 16:30:31 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/advisingapp/public_html/admin.php:4) in /home/advisingapp/public_html/dependancies/php/header.php on line 3
+[25-Apr-2016 16:30:31 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home/advisingapp/public_html/dependancies/db/dbcon.php on line 65
+[25-Apr-2016 16:30:32 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home/advisingapp/public_html/dependancies/db/dbcon.php on line 65
+[25-Apr-2016 16:30:33 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home/advisingapp/public_html/dependancies/db/dbcon.php on line 65
+[25-Apr-2016 16:30:36 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home/advisingapp/public_html/dependancies/db/dbcon.php on line 65
+[25-Apr-2016 16:30:39 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home/advisingapp/public_html/dependancies/db/dbcon.php on line 65
+[04-May-2016 16:36:41 America/Chicago] PHP Parse error:  syntax error, unexpected ':' in /home/advisingapp/public_html/admin.php on line 121
+[04-May-2016 21:00:56 America/Chicago] PHP Warning:  include(dependancies/views/aas-fall-sophmore.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/index.php on line 76
+[04-May-2016 21:00:56 America/Chicago] PHP Warning:  include(dependancies/views/aas-fall-sophmore.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/index.php on line 76
+[04-May-2016 21:00:56 America/Chicago] PHP Warning:  include(): Failed opening 'dependancies/views/aas-fall-sophmore.php' for inclusion (include_path='.:/opt/php54/lib/php') in /home/advisingapp/public_html/index.php on line 76
+[04-May-2016 21:19:54 America/Chicago] PHP Warning:  include(dependancies/views/aas-fall-sophmore.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/index.php on line 76
+[04-May-2016 21:19:54 America/Chicago] PHP Warning:  include(dependancies/views/aas-fall-sophmore.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/index.php on line 76
+[04-May-2016 21:19:54 America/Chicago] PHP Warning:  include(): Failed opening 'dependancies/views/aas-fall-sophmore.php' for inclusion (include_path='.:/opt/php54/lib/php') in /home/advisingapp/public_html/index.php on line 76
+[04-May-2016 21:19:59 America/Chicago] PHP Warning:  include(dependancies/views/aas-fall-sophmore.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/index.php on line 76
+[04-May-2016 21:19:59 America/Chicago] PHP Warning:  include(dependancies/views/aas-fall-sophmore.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/index.php on line 76
+[04-May-2016 21:19:59 America/Chicago] PHP Warning:  include(): Failed opening 'dependancies/views/aas-fall-sophmore.php' for inclusion (include_path='.:/opt/php54/lib/php') in /home/advisingapp/public_html/index.php on line 76
+[04-May-2016 21:25:28 America/Chicago] PHP Warning:  include(dependancies/views/aas-fall-sophmore.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/index.php on line 76
+[04-May-2016 21:25:28 America/Chicago] PHP Warning:  include(dependancies/views/aas-fall-sophmore.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/index.php on line 76
+[04-May-2016 21:25:28 America/Chicago] PHP Warning:  include(): Failed opening 'dependancies/views/aas-fall-sophmore.php' for inclusion (include_path='.:/opt/php54/lib/php') in /home/advisingapp/public_html/index.php on line 76
+[04-May-2016 21:25:35 America/Chicago] PHP Warning:  include(dependancies/views/aas-fall-sophmore.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/index.php on line 76
+[04-May-2016 21:25:35 America/Chicago] PHP Warning:  include(dependancies/views/aas-fall-sophmore.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/index.php on line 76
+[04-May-2016 21:25:35 America/Chicago] PHP Warning:  include(): Failed opening 'dependancies/views/aas-fall-sophmore.php' for inclusion (include_path='.:/opt/php54/lib/php') in /home/advisingapp/public_html/index.php on line 76
+[04-May-2016 21:25:37 America/Chicago] PHP Warning:  include(dependancies/views/aas-fall-sophmore.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/index.php on line 76
+[04-May-2016 21:25:37 America/Chicago] PHP Warning:  include(dependancies/views/aas-fall-sophmore.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/index.php on line 76
+[04-May-2016 21:25:37 America/Chicago] PHP Warning:  include(): Failed opening 'dependancies/views/aas-fall-sophmore.php' for inclusion (include_path='.:/opt/php54/lib/php') in /home/advisingapp/public_html/index.php on line 76
+[04-May-2016 21:26:13 America/Chicago] PHP Warning:  include(dependancies/views/aas-fall-sophmore.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/index.php on line 76
+[04-May-2016 21:26:13 America/Chicago] PHP Warning:  include(dependancies/views/aas-fall-sophmore.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/index.php on line 76
+[04-May-2016 21:26:13 America/Chicago] PHP Warning:  include(): Failed opening 'dependancies/views/aas-fall-sophmore.php' for inclusion (include_path='.:/opt/php54/lib/php') in /home/advisingapp/public_html/index.php on line 76
+[04-May-2016 21:26:15 America/Chicago] PHP Warning:  include(dependancies/views/aas-fall-sophmore.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/index.php on line 76
+[04-May-2016 21:26:15 America/Chicago] PHP Warning:  include(dependancies/views/aas-fall-sophmore.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/index.php on line 76
+[04-May-2016 21:26:15 America/Chicago] PHP Warning:  include(): Failed opening 'dependancies/views/aas-fall-sophmore.php' for inclusion (include_path='.:/opt/php54/lib/php') in /home/advisingapp/public_html/index.php on line 76
+[04-May-2016 21:27:10 America/Chicago] PHP Warning:  include(dependancies/views/aas-fall-sophmore.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/index.php on line 76
+[04-May-2016 21:27:10 America/Chicago] PHP Warning:  include(dependancies/views/aas-fall-sophmore.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/index.php on line 76
+[04-May-2016 21:27:10 America/Chicago] PHP Warning:  include(): Failed opening 'dependancies/views/aas-fall-sophmore.php' for inclusion (include_path='.:/opt/php54/lib/php') in /home/advisingapp/public_html/index.php on line 76
+[05-May-2016 00:24:43 America/Chicago] PHP Warning:  include(dependancies/views/aas-fall-sophmore.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/index.php on line 76
+[05-May-2016 00:24:43 America/Chicago] PHP Warning:  include(dependancies/views/aas-fall-sophmore.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/index.php on line 76
+[05-May-2016 00:24:43 America/Chicago] PHP Warning:  include(): Failed opening 'dependancies/views/aas-fall-sophmore.php' for inclusion (include_path='.:/opt/php54/lib/php') in /home/advisingapp/public_html/index.php on line 76
+[05-May-2016 17:48:39 America/Chicago] PHP Warning:  Missing argument 1 for CourseModel::getAASCourses(), called in /home/advisingapp/public_html/dependancies/views/catalog-aas-fall.php on line 7 and defined in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 32
+[05-May-2016 17:48:40 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 4' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:38
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(38): PDO->query('\r\n\t\tSELECT cour...')
+#1 /home/advisingapp/public_html/dependancies/views/catalog-aas-fall.php(7): CourseModel->getAASCourses()
+#2 /home/advisingapp/public_html/admin.php(154): include('/home/advisinga...')
+#3 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 38
+[05-May-2016 17:48:42 America/Chicago] PHP Warning:  Missing argument 1 for CourseModel::getAASCourses(), called in /home/advisingapp/public_html/dependancies/views/catalog-aas-fall.php on line 7 and defined in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 32
+[05-May-2016 17:48:42 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 4' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:38
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(38): PDO->query('\r\n\t\tSELECT cour...')
+#1 /home/advisingapp/public_html/dependancies/views/catalog-aas-fall.php(7): CourseModel->getAASCourses()
+#2 /home/advisingapp/public_html/admin.php(154): include('/home/advisinga...')
+#3 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 38
+[05-May-2016 17:48:47 America/Chicago] PHP Warning:  Missing argument 1 for CourseModel::getAASCourses(), called in /home/advisingapp/public_html/dependancies/views/catalog-aas-fall.php on line 7 and defined in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 32
+[05-May-2016 17:48:47 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 4' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:38
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(38): PDO->query('\r\n\t\tSELECT cour...')
+#1 /home/advisingapp/public_html/dependancies/views/catalog-aas-fall.php(7): CourseModel->getAASCourses()
+#2 /home/advisingapp/public_html/admin.php(154): include('/home/advisinga...')
+#3 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 38
+[05-May-2016 17:49:04 America/Chicago] PHP Warning:  Missing argument 1 for CourseModel::getAASCourses(), called in /home/advisingapp/public_html/dependancies/views/catalog-aas-fall.php on line 7 and defined in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 32
+[05-May-2016 17:49:04 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 4' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:38
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(38): PDO->query('\r\n\t\tSELECT cour...')
+#1 /home/advisingapp/public_html/dependancies/views/catalog-aas-fall.php(7): CourseModel->getAASCourses()
+#2 /home/advisingapp/public_html/admin.php(154): include('/home/advisinga...')
+#3 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 38
+[05-May-2016 17:50:40 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'aas' in 'where clause'' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:38
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(38): PDO->query('\r\n\t\tSELECT cour...')
+#1 /home/advisingapp/public_html/dependancies/views/catalog-aas-fall.php(7): CourseModel->getAASCourses('aas-fall-freshm...')
+#2 /home/advisingapp/public_html/admin.php(154): include('/home/advisinga...')
+#3 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 38
+[05-May-2016 17:51:42 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'aas' in 'where clause'' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:38
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(38): PDO->query('\r\n\t\tSELECT cour...')
+#1 /home/advisingapp/public_html/dependancies/views/catalog-aas-fall.php(7): CourseModel->getAASCourses('aas-fall-freshm...')
+#2 /home/advisingapp/public_html/admin.php(154): include('/home/advisinga...')
+#3 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 38
+[05-May-2016 17:55:02 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'aas' in 'where clause'' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:38
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(38): PDO->query('\r\n\t\tSELECT cour...')
+#1 /home/advisingapp/public_html/dependancies/views/catalog-aas-fall.php(7): CourseModel->getAASCourses('aas-fall-freshm...')
+#2 /home/advisingapp/public_html/admin.php(154): include('/home/advisinga...')
+#3 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 38
+[13-May-2016 15:11:43 America/Chicago] PHP Warning:  include(dependancies/views/bas-network-winter.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/admin.php on line 247
+[13-May-2016 15:11:43 America/Chicago] PHP Warning:  include(dependancies/views/bas-network-winter.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/admin.php on line 247
+[13-May-2016 15:11:43 America/Chicago] PHP Warning:  include(): Failed opening 'dependancies/views/bas-network-winter.php' for inclusion (include_path='.:/opt/php54/lib/php') in /home/advisingapp/public_html/admin.php on line 247
+[13-May-2016 15:48:04 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1) != 'fallStart'' at line 4' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:38
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(38): PDO->query('\r\n\t\tSELECT cour...')
+#1 /home/advisingapp/public_html/dependancies/views/catalog-aas-fall.php(7): CourseModel->getAASCourses('fallStart')
+#2 /home/advisingapp/public_html/admin.php(194): include('/home/advisinga...')
+#3 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 38
+[13-May-2016 15:48:08 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1) != 'fallStart'' at line 4' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:38
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(38): PDO->query('\r\n\t\tSELECT cour...')
+#1 /home/advisingapp/public_html/dependancies/views/catalog-aas-fall.php(7): CourseModel->getAASCourses('fallStart')
+#2 /home/advisingapp/public_html/admin.php(194): include('/home/advisinga...')
+#3 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 38
+[13-May-2016 15:48:24 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1) != 'fallStart'' at line 4' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:38
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(38): PDO->query('\r\n\t\tSELECT cour...')
+#1 /home/advisingapp/public_html/dependancies/views/catalog-aas-fall.php(7): CourseModel->getAASCourses('fallStart')
+#2 /home/advisingapp/public_html/admin.php(194): include('/home/advisinga...')
+#3 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 38
+[13-May-2016 15:49:13 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1) != 'fallStart'' at line 4' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:38
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(38): PDO->query('\r\n\t\tSELECT cour...')
+#1 /home/advisingapp/public_html/dependancies/views/catalog-aas-fall.php(7): CourseModel->getAASCourses('fallStart')
+#2 /home/advisingapp/public_html/admin.php(194): include('/home/advisinga...')
+#3 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 38
+[13-May-2016 15:49:15 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1) != 'fallStart'' at line 4' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:38
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(38): PDO->query('\r\n\t\tSELECT cour...')
+#1 /home/advisingapp/public_html/dependancies/views/catalog-aas-fall.php(7): CourseModel->getAASCourses('fallStart')
+#2 /home/advisingapp/public_html/admin.php(194): include('/home/advisinga...')
+#3 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 38
+[13-May-2016 15:49:18 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1) != 'fallStart'' at line 4' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:38
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(38): PDO->query('\r\n\t\tSELECT cour...')
+#1 /home/advisingapp/public_html/dependancies/views/catalog-aas-fall.php(7): CourseModel->getAASCourses('fallStart')
+#2 /home/advisingapp/public_html/admin.php(194): include('/home/advisinga...')
+#3 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 38
+[13-May-2016 15:49:26 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1) != 'fallStart'' at line 4' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:38
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(38): PDO->query('\r\n\t\tSELECT cour...')
+#1 /home/advisingapp/public_html/dependancies/views/catalog-aas-fall.php(7): CourseModel->getAASCourses('fallStart')
+#2 /home/advisingapp/public_html/admin.php(194): include('/home/advisinga...')
+#3 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 38
+[13-May-2016 16:22:30 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1) != 'fallStart'' at line 4' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:38
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(38): PDO->query('\r\n\t\tSELECT cour...')
+#1 /home/advisingapp/public_html/dependancies/views/catalog-aas-fall.php(7): CourseModel->getAASCourses('fallStart')
+#2 /home/advisingapp/public_html/admin.php(194): include('/home/advisinga...')
+#3 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 38
+[17-May-2016 16:39:21 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1) != 'fallStart'' at line 4' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:38
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(38): PDO->query('\r\n\t\tSELECT cour...')
+#1 /home/advisingapp/public_html/dependancies/views/catalog-aas-fall.php(7): CourseModel->getAASCourses('fallStart')
+#2 /home/advisingapp/public_html/admin.php(194): include('/home/advisinga...')
+#3 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 38
+[17-May-2016 16:39:33 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1) != 'fallStart'' at line 4' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:38
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(38): PDO->query('\r\n\t\tSELECT cour...')
+#1 /home/advisingapp/public_html/dependancies/views/catalog-aas-fall.php(7): CourseModel->getAASCourses('fallStart')
+#2 /home/advisingapp/public_html/admin.php(194): include('/home/advisinga...')
+#3 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 38
+[17-May-2016 16:50:21 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1) != 'fallStart'' at line 4' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:38
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(38): PDO->query('\r\n\t\tSELECT cour...')
+#1 /home/advisingapp/public_html/dependancies/views/catalog-aas-fall.php(7): CourseModel->getAASCourses('fallStart')
+#2 /home/advisingapp/public_html/admin.php(194): include('/home/advisinga...')
+#3 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 38
+[17-May-2016 16:50:36 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1) != 'fallStart'' at line 4' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:38
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(38): PDO->query('\r\n\t\tSELECT cour...')
+#1 /home/advisingapp/public_html/dependancies/views/catalog-aas-fall.php(7): CourseModel->getAASCourses('fallStart')
+#2 /home/advisingapp/public_html/admin.php(194): include('/home/advisinga...')
+#3 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 38
+[17-May-2016 16:50:41 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1) != 'fallStart'' at line 4' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:38
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(38): PDO->query('\r\n\t\tSELECT cour...')
+#1 /home/advisingapp/public_html/dependancies/views/catalog-aas-fall.php(7): CourseModel->getAASCourses('fallStart')
+#2 /home/advisingapp/public_html/admin.php(194): include('/home/advisinga...')
+#3 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 38
+[18-May-2016 15:53:45 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1) != 'fallStart'' at line 4' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:38
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(38): PDO->query('\r\n\t\tSELECT cour...')
+#1 /home/advisingapp/public_html/dependancies/views/catalog-aas-fall.php(7): CourseModel->getAASCourses('fallStart')
+#2 /home/advisingapp/public_html/admin.php(194): include('/home/advisinga...')
+#3 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 38
+[18-May-2016 15:55:17 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-1) != 'fallStart'' at line 4' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:38
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(38): PDO->query('\r\n\t\tSELECT cour...')
+#1 /home/advisingapp/public_html/dependancies/views/catalog-aas-fall.php(7): CourseModel->getAASCourses('fallStart')
+#2 /home/advisingapp/public_html/admin.php(194): include('/home/advisinga...')
+#3 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 38
+[18-May-2016 16:52:59 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 7' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:41
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(41): PDO->query('\r\n\t\t    SELECT ...')
+#1 /home/advisingapp/public_html/dependancies/views/catalog-aas-fall.php(7): CourseModel->getAASCourses('fallStart')
+#2 /home/advisingapp/public_html/admin.php(194): include('/home/advisinga...')
+#3 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 41
+[18-May-2016 16:53:05 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 7' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:41
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(41): PDO->query('\r\n\t\t    SELECT ...')
+#1 /home/advisingapp/public_html/dependancies/views/catalog-aas-fall.php(7): CourseModel->getAASCourses('fallStart')
+#2 /home/advisingapp/public_html/admin.php(194): include('/home/advisinga...')
+#3 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 41
+[07-Jun-2016 14:08:22 America/Chicago] PHP Parse error:  syntax error, unexpected 'fallStart' (T_STRING) in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 64
+[07-Jun-2016 14:09:38 America/Chicago] PHP Parse error:  syntax error, unexpected 'fallStart' (T_STRING) in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 64
+[07-Jun-2016 14:12:59 America/Chicago] PHP Warning:  Missing argument 2 for CourseModel::getBASCourses(), called in /home/advisingapp/public_html/dependancies/views/catalog-bas-software-fall.php on line 7 and defined in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 43
+[07-Jun-2016 14:12:59 America/Chicago] PHP Warning:  Missing argument 2 for CourseModel::getBASCourses(), called in /home/advisingapp/public_html/dependancies/views/catalog-bas-software-winter.php on line 7 and defined in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 43
+[07-Jun-2016 14:12:59 America/Chicago] PHP Warning:  Missing argument 2 for CourseModel::getBASCourses(), called in /home/advisingapp/public_html/dependancies/views/catalog-bas-network-fall.php on line 7 and defined in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 43
+[07-Jun-2016 14:12:59 America/Chicago] PHP Warning:  Missing argument 2 for CourseModel::getBASCourses(), called in /home/advisingapp/public_html/dependancies/views/catalog-bas-network-winter.php on line 7 and defined in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 43
+[09-Jun-2016 15:38:18 America/Chicago] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/advisingapp/public_html/coursetool.php on line 137
+[09-Jun-2016 15:39:27 America/Chicago] PHP Warning:  require(dependancies/php/dbcon.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/coursetool.php on line 51
+[09-Jun-2016 15:39:27 America/Chicago] PHP Warning:  require(dependancies/php/dbcon.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/coursetool.php on line 51
+[09-Jun-2016 15:39:27 America/Chicago] PHP Fatal error:  require(): Failed opening required 'dependancies/php/dbcon.php' (include_path='.:/opt/php54/lib/php') in /home/advisingapp/public_html/coursetool.php on line 51
+[09-Jun-2016 15:40:10 America/Chicago] PHP Warning:  require(dependancies/php/dbcon.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/coursetool.php on line 51
+[09-Jun-2016 15:40:10 America/Chicago] PHP Warning:  require(dependancies/php/dbcon.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/coursetool.php on line 51
+[09-Jun-2016 15:40:10 America/Chicago] PHP Fatal error:  require(): Failed opening required 'dependancies/php/dbcon.php' (include_path='.:/opt/php54/lib/php') in /home/advisingapp/public_html/coursetool.php on line 51
+[09-Jun-2016 15:40:13 America/Chicago] PHP Warning:  require(dependancies/php/dbcon.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/coursetool.php on line 51
+[09-Jun-2016 15:40:13 America/Chicago] PHP Warning:  require(dependancies/php/dbcon.php): failed to open stream: No such file or directory in /home/advisingapp/public_html/coursetool.php on line 51
+[09-Jun-2016 15:40:13 America/Chicago] PHP Fatal error:  require(): Failed opening required 'dependancies/php/dbcon.php' (include_path='.:/opt/php54/lib/php') in /home/advisingapp/public_html/coursetool.php on line 51
+[09-Jun-2016 15:40:43 America/Chicago] PHP Fatal error:  Call to a member function getAllAvailableCourses() on a non-object in /home/advisingapp/public_html/coursetool.php on line 137
+[09-Jun-2016 15:42:59 America/Chicago] PHP Fatal error:  Call to a member function getAllCourses() on a non-object in /home/advisingapp/public_html/coursetool.php on line 137
+[09-Jun-2016 15:43:02 America/Chicago] PHP Fatal error:  Call to a member function getAllCourses() on a non-object in /home/advisingapp/public_html/coursetool.php on line 137
+[09-Jun-2016 15:43:09 America/Chicago] PHP Fatal error:  Call to a member function getAllCourses() on a non-object in /home/advisingapp/public_html/coursetool.php on line 137
+[09-Jun-2016 15:45:01 America/Chicago] PHP Fatal error:  Call to a member function getAllCourses() on a non-object in /home/advisingapp/public_html/coursetool.php on line 137
+[09-Jun-2016 15:45:05 America/Chicago] PHP Fatal error:  Call to a member function getAllCourses() on a non-object in /home/advisingapp/public_html/coursetool.php on line 137
+[09-Jun-2016 16:56:58 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/advisingapp/public_html/coursetool.php on line 67
+[09-Jun-2016 16:57:27 America/Chicago] PHP Parse error:  syntax error, unexpected 'else' (T_ELSE) in /home/advisingapp/public_html/coursetool.php on line 211
+[09-Jun-2016 17:59:11 America/Chicago] PHP Fatal error:  Call to a member function getCourse() on a non-object in /home/advisingapp/public_html/coursetool.php on line 118
+[09-Jun-2016 17:59:36 America/Chicago] PHP Fatal error:  Call to a member function getCourse() on a non-object in /home/advisingapp/public_html/coursetool.php on line 118
+[09-Jun-2016 18:00:25 America/Chicago] PHP Fatal error:  Call to a member function getCourse() on a non-object in /home/advisingapp/public_html/coursetool.php on line 118
+[09-Jun-2016 18:00:28 America/Chicago] PHP Fatal error:  Call to a member function getCourse() on a non-object in /home/advisingapp/public_html/coursetool.php on line 118
+[09-Jun-2016 18:00:58 America/Chicago] PHP Fatal error:  Call to a member function getCourse() on a non-object in /home/advisingapp/public_html/coursetool.php on line 118
+[09-Jun-2016 18:01:02 America/Chicago] PHP Fatal error:  Call to a member function getCourse() on a non-object in /home/advisingapp/public_html/coursetool.php on line 118
+[09-Jun-2016 18:01:07 America/Chicago] PHP Fatal error:  Call to a member function getCourse() on a non-object in /home/advisingapp/public_html/coursetool.php on line 118
+[09-Jun-2016 18:04:03 America/Chicago] PHP Fatal error:  Call to a member function getCourse() on a non-object in /home/advisingapp/public_html/coursetool.php on line 118
+[09-Jun-2016 18:04:09 America/Chicago] PHP Fatal error:  Call to a member function getCourse() on a non-object in /home/advisingapp/public_html/coursetool.php on line 118
+[09-Jun-2016 18:05:10 America/Chicago] PHP Fatal error:  Call to a member function getCourse() on a non-object in /home/advisingapp/public_html/coursetool.php on line 118
+[09-Jun-2016 18:06:02 America/Chicago] PHP Catchable fatal error:  Argument 1 passed to CourseModel::__construct() must be an instance of PDO, null given, called in /home/advisingapp/public_html/coursetool.php on line 119 and defined in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 17
+[09-Jun-2016 18:10:27 America/Chicago] PHP Fatal error:  Cannot use object of type PDOStatement as array in /home/advisingapp/public_html/coursetool.php on line 125
+[09-Jun-2016 18:17:21 America/Chicago] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/advisingapp/public_html/coursetool.php on line 104
+[09-Jun-2016 18:21:44 America/Chicago] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/advisingapp/public_html/coursetool.php on line 107
+[09-Jun-2016 18:22:51 America/Chicago] PHP Fatal error:  Using $this when not in object context in /home/advisingapp/public_html/coursetool.php on line 124
+[09-Jun-2016 18:23:14 America/Chicago] PHP Fatal error:  Using $this when not in object context in /home/advisingapp/public_html/coursetool.php on line 124
+[09-Jun-2016 18:23:24 America/Chicago] PHP Fatal error:  Using $this when not in object context in /home/advisingapp/public_html/coursetool.php on line 124
+[09-Jun-2016 18:27:18 America/Chicago] PHP Parse error:  syntax error, unexpected '=', expecting ',' or ';' in /home/advisingapp/public_html/coursetool.php on line 124
+[09-Jun-2016 19:25:01 America/Chicago] PHP Parse error:  syntax error, unexpected '=' in /home/advisingapp/public_html/coursetool.php on line 190
+[09-Jun-2016 19:30:31 America/Chicago] PHP Fatal error:  Cannot redeclare updateCourse() (previously declared in /home/advisingapp/public_html/coursetool.php:168) in /home/advisingapp/public_html/coursetool.php on line 168
+[09-Jun-2016 19:34:36 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home/advisingapp/public_html/coursetool.php on line 146
+[09-Jun-2016 19:36:00 America/Chicago] PHP Fatal error:  Cannot redeclare updateCourse() (previously declared in /home/advisingapp/public_html/coursetool.php:160) in /home/advisingapp/public_html/coursetool.php on line 160
+[09-Jun-2016 19:38:12 America/Chicago] PHP Fatal error:  Cannot redeclare updateCourse() (previously declared in /home/advisingapp/public_html/coursetool.php:160) in /home/advisingapp/public_html/coursetool.php on line 160
+[09-Jun-2016 19:41:51 America/Chicago] PHP Fatal error:  Cannot redeclare updateCourse() (previously declared in /home/advisingapp/public_html/coursetool.php:160) in /home/advisingapp/public_html/coursetool.php on line 160
+[09-Jun-2016 19:44:32 America/Chicago] PHP Fatal error:  Cannot redeclare updateCourse() (previously declared in /home/advisingapp/public_html/coursetool.php:160) in /home/advisingapp/public_html/coursetool.php on line 160
+[09-Jun-2016 19:47:38 America/Chicago] PHP Fatal error:  Cannot redeclare addCourse() (previously declared in /home/advisingapp/public_html/coursetool.php:175) in /home/advisingapp/public_html/coursetool.php on line 175
+[09-Jun-2016 19:48:58 America/Chicago] PHP Fatal error:  Call to undefined function addCourse() in /home/advisingapp/public_html/coursetool.php on line 112
+[09-Jun-2016 19:50:33 America/Chicago] PHP Fatal error:  Call to undefined function addCourse() in /home/advisingapp/public_html/coursetool.php on line 112
+[09-Jun-2016 19:53:22 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home/advisingapp/public_html/coursetool.php on line 185
+[09-Jun-2016 19:54:16 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'prereqs' cannot be null' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:152
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(152): PDOStatement->execute()
+#1 /home/advisingapp/public_html/coursetool.php(180): CourseModel->addCourse('it500', 'IT 500', 'Testing', 'Testing my cool...', '5', NULL)
+#2 /home/advisingapp/public_html/coursetool.php(112): addCourse('it500', 'IT 500', 'Testing', 'Testing my cool...', '5', NULL)
+#3 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 152
+[09-Jun-2016 19:56:28 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'prereqs' cannot be null' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:152
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(152): PDOStatement->execute()
+#1 /home/advisingapp/public_html/coursetool.php(180): CourseModel->addCourse('it500', 'IT 500', 'Testing', 'Testing my cool...', '5', NULL)
+#2 /home/advisingapp/public_html/coursetool.php(112): addCourse('it500', 'IT 500', 'Testing', 'Testing my cool...', '5', NULL)
+#3 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 152
+[09-Jun-2016 20:07:51 America/Chicago] PHP Warning:  Missing argument 2 for deleteCourse(), called in /home/advisingapp/public_html/coursetool.php on line 148 and defined in /home/advisingapp/public_html/coursetool.php on line 193
+[09-Jun-2016 20:07:51 America/Chicago] PHP Warning:  Missing argument 3 for deleteCourse(), called in /home/advisingapp/public_html/coursetool.php on line 148 and defined in /home/advisingapp/public_html/coursetool.php on line 193
+[09-Jun-2016 20:07:51 America/Chicago] PHP Warning:  Missing argument 4 for deleteCourse(), called in /home/advisingapp/public_html/coursetool.php on line 148 and defined in /home/advisingapp/public_html/coursetool.php on line 193
+[09-Jun-2016 20:07:51 America/Chicago] PHP Warning:  Missing argument 5 for deleteCourse(), called in /home/advisingapp/public_html/coursetool.php on line 148 and defined in /home/advisingapp/public_html/coursetool.php on line 193
+[09-Jun-2016 20:07:51 America/Chicago] PHP Warning:  Missing argument 6 for deleteCourse(), called in /home/advisingapp/public_html/coursetool.php on line 148 and defined in /home/advisingapp/public_html/coursetool.php on line 193
+[20-Oct-2016 19:39:54 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'advising_app.scheduled_courses' doesn't exist in /home/advisingapp/public_html/_old/dependancies/models/CourseModel.php:72
+Stack trace:
+#0 /home/advisingapp/public_html/_old/dependancies/models/CourseModel.php(72): PDO->query('\r\n        SELEC...')
+#1 /home/advisingapp/public_html/_old/index.php(96): CourseModel->getScheduledCourses()
+#2 {main}
+  thrown in /home/advisingapp/public_html/_old/dependancies/models/CourseModel.php on line 72
+[28-Dec-2016 05:13:58 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'advising_app.scheduled_courses' doesn't exist in /home/advisingapp/public_html/_old/dependancies/models/CourseModel.php:72
+Stack trace:
+#0 /home/advisingapp/public_html/_old/dependancies/models/CourseModel.php(72): PDO->query('\r\n        SELEC...')
+#1 /home/advisingapp/public_html/_old/index.php(96): CourseModel->getScheduledCourses()
+#2 {main}
+  thrown in /home/advisingapp/public_html/_old/dependancies/models/CourseModel.php on line 72

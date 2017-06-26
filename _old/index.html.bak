@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Advising App</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-2.2.3.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src="scripts/jquery.ui.touch-punch.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+  
+	/**
+	* Add new classes to the schedule
+	*/
+  /*$(function() {
+	var $column = $(".column");
+	var $courseCatalog = $("#course-catalog");
+	
+	 /**
+	 *	This makes items draggable from specified location ($courseCatalog)
+	 */
+   /* $(".portlet", $courseCatalog ).draggable({
+      cancel: "a.ui-icon", 		// clicking an icon won't initiate dragging
+      revert: "invalid", 		// when not dropped, the item will revert back to its initial position
+      containment: "document",
+      helper: "clone",
+      cursor: "move"
+    });
+	
+	
+	/**
+	* Make items droppable.
+	* To make a div droppable, give it the droppable class
+	* Droppable elements will only accept elements with tags defined in "accept:"
+	*/
+  /*  $column.droppable({
+		//This is the element that the droppable will accept
+		accept: ".portlet, :not(.schedule)",
+		
+		//This function is called when a drop attempt is made
+		drop: function( event, ui ) {
+		
+		
+			//Remove the catalog class so it won't try to duplicate classes
+			//that are already in the schedule
+			ui.draggable.switchClass("schedule", "catalog");
+			
+			//This allows items to be inserted into the current schedule from the
+			//course catalog. On release, a clone of the dragged object is added
+			//to the selected column.
+			//ui.draggable.clone().detach().appendTo($(this));
+
+		//This is temporary. Need to resolve some classes having multiple instances
+		$(this).append($(ui.draggable).detach());
+	  }
+    });
+	
+	
+	$courseCatalog.droppable({
+		//This is the element that the droppable will accept
+		accept: ".portlet",
+			
+		//This function is called when a drop attempt is made
+		drop: function( event, ui ) {
+		
+		//copy the element to the container
+		if(ui.draggable.hasClass("schedule")){
+		
+			//Remove the catalog class so it won't try to duplicate classes
+			//that are already in the schedule
+			ui.draggable.switchClass("catalog", "schedule");
+			
+			//This allows items to be inserted into the current schedule from the
+			//course catalog. On release, a clone of the dragged object is added
+			//to the selected column.
+			//ui.draggable.clone().detach().appendTo($(this));
+
+		}
+		//This is temporary. Need to resolve some classes having multiple instances
+		$(this).append($(ui.draggable).detach());
+	  }
+    });
+	
+	
+  });
+  
+  /**
+  * This makes selected elements sortable withing all other elements in "connectWith"
+  */
+  $(function() {
+	$( ".column, #course-catalog" ).sortable({
+		connectWith: ".column, #course-catalog",
+		handle: ".portlet-header",
+		cancel: ".portlet-toggle",
+		placeholder: "portlet-placeholder ui-corner-all",
+		stop: function(event,ui){ExecuteOnDrop($(ui.item), $(ui.item).parent())}
+    });
+	
+	
+	
+	//Open and close function for modal window
+	function openModal(name) {
+    $( "#dialog-message" ).dialog({
+		title: name,
+      modal: true,
+	  width: 600,
+      buttons: {
+        Ok: function() {
+          $( this ).dialog( "close" );
+        }
+      }
+    });
+	
+  }
+	
+    $( ".portlet" )
+      .addClass( "ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" )
+      .find( ".portlet-header" )
+        .addClass( "ui-widget-header ui-corner-all" )
+        .prepend( "<span class='ui-icon ui-icon-search portlet-toggle'></span>");
+ 
+    $( ".portlet-toggle" ).click(function(event) {
+      var icon = $( this );
+      //icon.toggleClass( "ui-icon-minusthick ui-icon-plusthick" );
+	  
+      var desc = icon.closest( ".portlet" ).find( ".portlet-content" ).text();
+	  var name = icon.closest( ".portlet" ).find( ".portlet-header" ).text();
+	  $("#class-modal").text(desc);
+	  //var d = $('#dialog);
+	  //d.data('title.dialog', name);
+	 
+	  openModal(name);
+    });
+  });
+  
+  /**
+  * This class is responsible for determining which queries to use.
+  */
+  function ExecuteOnDrop(item, parent){
+  
+  var classType = item.attr("class");
+  var id = item.attr("id");
+  
+		//If the course is dragged into a quarter column, set it to have the
+		//proper column id. Otherwise, remove the column id and set it to a 
+		//catalogued course (in the unused course list)
+		if(item.attr("current-location") == "catalog" && parent.hasClass("column")){
+			alert("Class Added To Schedule: " + parent.attr("class"));
+			item.attr("current-location", parent.attr("id"));
+			item.addClass(parent.attr(id));
+		//if the class is moved to another quarter
+		}else if(item.attr("current-location") != "catalog" && parent.hasClass("column") && item.attr("current-location") != parent.attr("id")){
+			item.attr("current-location", parent.attr("id"));
+			alert("Class Moved To Another Quarter: " + parent.attr("class"));
+		//if the class is removed from the schedule
+		}else if(item.attr("current-location") != "catalog" && parent.is("#course-catalog")){
+			alert("Class Removed From Schedule");
+			item.attr("current-location", "catalog");
+		}
+		//alert(divClass + " " + id);
+	}
+  </script>
+</head>
+<body>
+ 
+ <!--This is the catalog of classes that can be added to the schedule-->
+ 
+ <div id="course-catalog">
+ 
+  <div class="title">
+	<p class="column-title">CATALOG</p>
+	</div>
+ 
+ <div class="portlet" current-location="catalog" id="IT101">
+    <div class="portlet-header">IT 101</div>
+    <div class="portlet-content">Introduction to Information Technology: Provides an overview of information technology. Introduces computer hardware, software, procedures and systems, and their applications in various segments of society. Introduces information about careers in software development, networking, and security. Discussion of computer ethics and current events. PREREQUISITE: Eligible for READ 094 or instructor's permission.</div>
+  </div>
+ 
+  <div class="portlet" current-location="catalog" id="IT102">
+    <div class="portlet-header">IT 102</div>
+    <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+  </div>
+ 
+  <div class="portlet" current-location="catalog" id="IT114">
+    <div class="portlet-header">IT 114</div>
+    <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+  </div>
+ 
+   <div class="portlet" current-location="catalog" id="IT121">
+    <div class="portlet-header">IT 121</div>
+    <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+  </div>
+ 
+  <div class="portlet" current-location="catalog" id="IT131">
+    <div class="portlet-header">IT 131</div>
+    <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+  </div>
+ 
+   <div class="portlet" current-location="catalog" id="IT135">
+    <div class="portlet-header">IT 135</div>
+    <div class="portlet-content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</div>
+  </div>
+ 
+ <div class="portlet" current-location="catalog" id="IT141">
+    <div class="portlet-header">IT 141</div>
+    <div class="portlet-content">Introduction to Information Technology: Provides an overview of information technology. Introduces computer hardware, software, procedures and systems, and their applications in various segments of society. Introduces information about careers in software development, networking, and security. Discussion of computer ethics and current events. PREREQUISITE: Eligible for READ 094 or instructor's permission.</div>
+  </div>
+  
+  <div class="portlet" current-location="catalog" id="IT160">
+    <div class="portlet-header">IT 160</div>
+    <div class="portlet-content">Introduction to Information Technology: Provides an overview of information technology. Introduces computer hardware, software, procedures and systems, and their applications in various segments of society. Introduces information about careers in software development, networking, and security. Discussion of computer ethics and current events. PREREQUISITE: Eligible for READ 094 or instructor's permission.</div>
+  </div>
+  
+  <div class="portlet" current-location="catalog" id="IT175">
+    <div class="portlet-header">IT 175</div>
+    <div class="portlet-content">Introduction to Information Technology: Provides an overview of information technology. Introduces computer hardware, software, procedures and systems, and their applications in various segments of society. Introduces information about careers in software development, networking, and security. Discussion of computer ethics and current events. PREREQUISITE: Eligible for READ 094 or instructor's permission.</div>
+  </div>
+  
+  <div class="portlet" current-location="catalog" id="IT178">
+    <div class="portlet-header">IT 178</div>
+    <div class="portlet-content">Introduction to Information Technology: Provides an overview of information technology. Introduces computer hardware, software, procedures and systems, and their applications in various segments of society. Introduces information about careers in software development, networking, and security. Discussion of computer ethics and current events. PREREQUISITE: Eligible for READ 094 or instructor's permission.</div>
+  </div>
+  
+  <div class="portlet" current-location="catalog" id="IT190">
+    <div class="portlet-header">IT 190</div>
+    <div class="portlet-content">Introduction to Information Technology: Provides an overview of information technology. Introduces computer hardware, software, procedures and systems, and their applications in various segments of society. Introduces information about careers in software development, networking, and security. Discussion of computer ethics and current events. PREREQUISITE: Eligible for READ 094 or instructor's permission.</div>
+  </div>
+  
+  <div class="portlet" current-location="catalog" id="IT194">
+    <div class="portlet-header">IT 194</div>
+    <div class="portlet-content">Introduction to Information Technology: Provides an overview of information technology. Introduces computer hardware, software, procedures and systems, and their applications in various segments of society. Introduces information about careers in software development, networking, and security. Discussion of computer ethics and current events. PREREQUISITE: Eligible for READ 094 or instructor's permission.</div>
+  </div>
+  
+  <div class="portlet" current-location="catalog" id="IT201">
+    <div class="portlet-header">IT 201</div>
+    <div class="portlet-content">Introduction to Information Technology: Provides an overview of information technology. Introduces computer hardware, software, procedures and systems, and their applications in various segments of society. Introduces information about careers in software development, networking, and security. Discussion of computer ethics and current events. PREREQUISITE: Eligible for READ 094 or instructor's permission.</div>
+  </div>
+  
+  <div class="portlet" current-location="catalog" id="IT219">
+    <div class="portlet-header">IT 219</div>
+    <div class="portlet-content">Introduction to Information Technology: Provides an overview of information technology. Introduces computer hardware, software, procedures and systems, and their applications in various segments of society. Introduces information about careers in software development, networking, and security. Discussion of computer ethics and current events. PREREQUISITE: Eligible for READ 094 or instructor's permission.</div>
+  </div>
+  
+  <div class="portlet" current-location="catalog" id="IT220">
+    <div class="portlet-header">IT 220</div>
+    <div class="portlet-content">Introduction to Information Technology: Provides an overview of information technology. Introduces computer hardware, software, procedures and systems, and their applications in various segments of society. Introduces information about careers in software development, networking, and security. Discussion of computer ethics and current events. PREREQUISITE: Eligible for READ 094 or instructor's permission.</div>
+  </div>
+  
+ </div>
+ 
+ <!--End Course Catalog-->
+ 
+ <!--Summer Schedule-->
+<div class="column summer" id="summer-first-year">
+ 
+ <div class="title">
+	<p class="column-title">SUMMER</p>
+	</div>
+ 
+</div>
+ 
+ <!--Spring Schedule-->
+<div class="column spring" id="spring-first-year">
+
+<div class="title">
+	<p class="column-title">SPRING</p>
+	</div>
+ 
+</div>
+ 
+ <!--Winter Schedule-->
+<div class="column winter" id="winter-first-year">
+ 
+ <div class="title">
+	<p class="column-title">WINTER</p>
+	</div>
+ 
+</div>
+
+<!--Fall Schedule-->
+<div class="column fall" id="fall-first-year">
+ 
+ <div class="title">
+	<p class="column-title">FALL</p>
+	</div>
+ 
+</div>
+ 
+	<div id="dialog-message" title="Class Information">
+		<p id="class-modal"></p>
+	</div>
+ 
+</body>
+</html>

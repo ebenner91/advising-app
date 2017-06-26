@@ -1,0 +1,24 @@
+[19-Mar-2017 19:59:35 America/Chicago] PHP Warning:  session_start(): open(/tmp/sess_50db6b334b021d3a138cb308e59de5f7, O_RDWR) failed: Permission denied (13) in /home/advisingapp/public_html/index.php on line 2
+[19-Mar-2017 19:59:35 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/advisingapp/public_html/index.php:2) in /home/advisingapp/public_html/index.php on line 2
+[19-Mar-2017 19:59:35 America/Chicago] PHP Warning:  Unknown: open(/tmp/sess_50db6b334b021d3a138cb308e59de5f7, O_RDWR) failed: Permission denied (13) in Unknown on line 0
+[19-Mar-2017 19:59:35 America/Chicago] PHP Warning:  Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (/tmp) in Unknown on line 0
+[28-Mar-2017 07:39:48 America/Chicago] PHP Warning:  session_start(): open(/tmp/sess_c0e8c8d3c739a037e312ce608f975cf8, O_RDWR) failed: Permission denied (13) in /home/advisingapp/public_html/index.php on line 2
+[28-Mar-2017 07:39:48 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/advisingapp/public_html/index.php:2) in /home/advisingapp/public_html/index.php on line 2
+[28-Mar-2017 07:39:48 America/Chicago] PHP Warning:  Unknown: open(/tmp/sess_c0e8c8d3c739a037e312ce608f975cf8, O_RDWR) failed: Permission denied (13) in Unknown on line 0
+[28-Mar-2017 07:39:48 America/Chicago] PHP Warning:  Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (/tmp) in Unknown on line 0
+[10-May-2017 22:55:01 America/Chicago] PHP Warning:  session_start(): open(/tmp/sess_e0183050949d28aab2e84106a5491672, O_RDWR) failed: Permission denied (13) in /home/advisingapp/public_html/index.php on line 2
+[10-May-2017 22:55:01 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/advisingapp/public_html/index.php:2) in /home/advisingapp/public_html/index.php on line 2
+[10-May-2017 22:55:01 America/Chicago] PHP Warning:  Unknown: open(/tmp/sess_e0183050949d28aab2e84106a5491672, O_RDWR) failed: Permission denied (13) in Unknown on line 0
+[10-May-2017 22:55:01 America/Chicago] PHP Warning:  Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (/tmp) in Unknown on line 0
+[11-May-2017 06:09:49 America/Chicago] PHP Warning:  session_start(): open(/tmp/sess_95c42001a7c395ada54697b665b704d3, O_RDWR) failed: Permission denied (13) in /home/advisingapp/public_html/index.php on line 2
+[11-May-2017 06:09:49 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/advisingapp/public_html/index.php:2) in /home/advisingapp/public_html/index.php on line 2
+[11-May-2017 06:09:49 America/Chicago] PHP Warning:  Unknown: open(/tmp/sess_95c42001a7c395ada54697b665b704d3, O_RDWR) failed: Permission denied (13) in Unknown on line 0
+[11-May-2017 06:09:49 America/Chicago] PHP Warning:  Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (/tmp) in Unknown on line 0
+[11-May-2017 13:14:31 America/Chicago] PHP Warning:  session_start(): open(/tmp/sess_c568f37e28385e92f006223d57b3e8f4, O_RDWR) failed: Permission denied (13) in /home/advisingapp/public_html/index.php on line 2
+[11-May-2017 13:14:31 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/advisingapp/public_html/index.php:2) in /home/advisingapp/public_html/index.php on line 2
+[11-May-2017 13:14:32 America/Chicago] PHP Warning:  Unknown: open(/tmp/sess_c568f37e28385e92f006223d57b3e8f4, O_RDWR) failed: Permission denied (13) in Unknown on line 0
+[11-May-2017 13:14:32 America/Chicago] PHP Warning:  Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (/tmp) in Unknown on line 0
+[13-May-2017 22:16:11 America/Chicago] PHP Warning:  session_start(): open(/tmp/sess_3bb5d67c1ded3487f6665ce1c603f621, O_RDWR) failed: Permission denied (13) in /home/advisingapp/public_html/index.php on line 2
+[13-May-2017 22:16:11 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/advisingapp/public_html/index.php:2) in /home/advisingapp/public_html/index.php on line 2
+[13-May-2017 22:16:11 America/Chicago] PHP Warning:  Unknown: open(/tmp/sess_3bb5d67c1ded3487f6665ce1c603f621, O_RDWR) failed: Permission denied (13) in Unknown on line 0
+[13-May-2017 22:16:11 America/Chicago] PHP Warning:  Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (/tmp) in Unknown on line 0

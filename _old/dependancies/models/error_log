@@ -1,0 +1,92 @@
+[19-Apr-2016 17:37:40 America/Chicago] PHP Fatal error:  Call to a member function getCompleteEventArchive() on a non-object in /home/advisingapp/public_html/dependancies/models/UpdateSchedule.php on line 13
+[19-Apr-2016 18:25:24 America/Chicago] PHP Fatal error:  Call to a member function getCompleteEventArchive() on a non-object in /home/advisingapp/public_html/dependancies/models/UpdateSchedule.php on line 13
+[19-Apr-2016 18:33:06 America/Chicago] PHP Fatal error:  Call to a member function setEvents() on a non-object in /home/advisingapp/public_html/dependancies/models/UpdateSchedule.php on line 18
+[19-Apr-2016 18:33:56 America/Chicago] PHP Fatal error:  Call to a member function setEvents() on a non-object in /home/advisingapp/public_html/dependancies/models/UpdateSchedule.php on line 18
+[19-Apr-2016 18:34:21 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'column, completed)
+             VALUES('1', NULL, NULL, 'Software Development')' at line 1' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:60
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(60): PDOStatement->execute()
+#1 /home/advisingapp/public_html/dependancies/models/UpdateSchedule.php(18): CourseModel->insertCourse(1, NULL, NULL, 'n', 'Software Develo...')
+#2 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 60
+[19-Apr-2016 18:35:44 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'column, completed)
+             VALUES('1', NULL, NULL, 'Software Development')' at line 1' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:60
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(60): PDOStatement->execute()
+#1 /home/advisingapp/public_html/dependancies/models/UpdateSchedule.php(18): CourseModel->insertCourse(1, NULL, NULL, 'n', 'Software Develo...')
+#2 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 60
+[19-Apr-2016 18:35:50 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'column, completed)
+             VALUES('1', NULL, NULL, 'Software Development')' at line 1' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:60
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(60): PDOStatement->execute()
+#1 /home/advisingapp/public_html/dependancies/models/UpdateSchedule.php(18): CourseModel->insertCourse(1, NULL, NULL, 'n', 'Software Develo...')
+#2 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 60
+[19-Apr-2016 18:45:05 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'column, completed)
+             VALUES('1', NULL, NULL, 'Software Development')' at line 1' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:60
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(60): PDOStatement->execute()
+#1 /home/advisingapp/public_html/dependancies/models/UpdateSchedule.php(18): CourseModel->insertCourse(1, NULL, NULL, 'n', 'Software Develo...')
+#2 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 60
+[19-Apr-2016 18:48:18 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'column, completed)
+             VALUES('1', 'it114?column=fall-first-year', NUL' at line 1' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:60
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(60): PDOStatement->execute()
+#1 /home/advisingapp/public_html/dependancies/models/UpdateSchedule.php(18): CourseModel->insertCourse(1, 'it114?column=fa...', NULL, 'n', 'Software Develo...')
+#2 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 60
+[19-Apr-2016 18:51:55 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'column, completed)
+             VALUES('1', 'it114', NULL, 'Software Developmen' at line 1' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:60
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(60): PDOStatement->execute()
+#1 /home/advisingapp/public_html/dependancies/models/UpdateSchedule.php(18): CourseModel->insertCourse(1, 'it114', 'spring-first-ye...', 'n', 'Software Develo...')
+#2 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 60
+[20-Apr-2016 15:11:33 America/Chicago] PHP Warning:  Missing argument 5 for CourseModel::insertCourse(), called in /home/advisingapp/public_html/dependancies/models/UpdateSchedule.php on line 19 and defined in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 48
+[20-Apr-2016 15:11:33 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'column, completed)
+             VALUES('1', 'it114', NULL, NULL)' at line 1' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:60
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(60): PDOStatement->execute()
+#1 /home/advisingapp/public_html/dependancies/models/UpdateSchedule.php(19): CourseModel->insertCourse(1, 'it114', 'fall-first-year', 'n')
+#2 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 60
+[20-Apr-2016 15:12:37 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'column, completed)
+             VALUES('1', 'it114', 'fall-first-year', 'n')' at line 1' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:60
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(60): PDOStatement->execute()
+#1 /home/advisingapp/public_html/dependancies/models/UpdateSchedule.php(19): CourseModel->insertCourse(1, 'it114', 'fall-first-year', 'n')
+#2 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 60
+[20-Apr-2016 15:14:42 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1142 INSERT command denied to user 'advising_read'@'localhost' for table 'program_events'' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:60
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(60): PDOStatement->execute()
+#1 /home/advisingapp/public_html/dependancies/models/UpdateSchedule.php(19): CourseModel->insertCourse(1, 'it114', 'winter-first-ye...', 'n')
+#2 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 60
+[20-Apr-2016 15:22:33 America/Chicago] PHP Catchable fatal error:  Argument 1 passed to CourseModel::__construct() must be an instance of PDO, null given, called in /home/advisingapp/public_html/dependancies/models/UpdateSchedule.php on line 10 and defined in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 17
+[20-Apr-2016 15:26:09 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'advising_app.program_events' doesn't exist' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:60
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(60): PDOStatement->execute()
+#1 /home/advisingapp/public_html/dependancies/models/UpdateSchedule.php(19): CourseModel->insertCourse(1, 'it114', 'winter-first-ye...', 'n')
+#2 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 60
+[20-Apr-2016 15:27:20 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'advising_app.program_events' doesn't exist' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:60
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(60): PDOStatement->execute()
+#1 /home/advisingapp/public_html/dependancies/models/UpdateSchedule.php(19): CourseModel->insertCourse(1, 'it114', 'winter-first-ye...', 'n')
+#2 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 60
+[20-Apr-2016 18:21:35 America/Chicago] PHP Fatal error:  Call to undefined method CourseModel::rescheduleCourse() in /home/advisingapp/public_html/dependancies/models/RescheduleCourse.php on line 15
+[20-Apr-2016 18:21:44 America/Chicago] PHP Fatal error:  Call to undefined method CourseModel::rescheduleCourse() in /home/advisingapp/public_html/dependancies/models/RescheduleCourse.php on line 15
+[20-Apr-2016 18:23:02 America/Chicago] PHP Fatal error:  Call to undefined method CourseModel::rescheduleCourse() in /home/advisingapp/public_html/dependancies/models/RescheduleCourse.php on line 15
+[20-Apr-2016 18:26:32 America/Chicago] PHP Fatal error:  Call to undefined method CourseModel::rescheduleCourse() in /home/advisingapp/public_html/dependancies/models/RescheduleCourse.php on line 15
+[20-Apr-2016 18:27:24 America/Chicago] PHP Fatal error:  Call to undefined method CourseModel::rescheduleCourse() in /home/advisingapp/public_html/dependancies/models/RescheduleCourse.php on line 15
+[20-Apr-2016 18:28:17 America/Chicago] PHP Fatal error:  Call to undefined method CourseModel::rescheduleCourse() in /home/advisingapp/public_html/dependancies/models/RescheduleCourse.php on line 15
+[20-Apr-2016 18:41:26 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1143 SELECT command denied to user 'advising_write'@'localhost' for column 'course_id' in table 'scheduled_courses'' in /home/advisingapp/public_html/dependancies/models/CourseModel.php:79
+Stack trace:
+#0 /home/advisingapp/public_html/dependancies/models/CourseModel.php(79): PDOStatement->execute()
+#1 /home/advisingapp/public_html/dependancies/models/RescheduleCourse.php(15): CourseModel->rescheduleCourse('fall-first-year', NULL)
+#2 {main}
+  thrown in /home/advisingapp/public_html/dependancies/models/CourseModel.php on line 79
