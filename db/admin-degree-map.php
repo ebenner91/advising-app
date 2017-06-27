@@ -8,7 +8,9 @@
  * Database queries for admin degree map functionality.
  */
 
-include '../../db.php';
+//Commenting out original include statement and replacing with one that works on the dev subdomain
+//include '../../db.php';
+include "/home/advisingapp/db-dev.php";
 
 //Check if post is sent from ajax call.
 if(isset($_POST['type'])) {

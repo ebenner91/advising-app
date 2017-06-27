@@ -8,7 +8,9 @@
  * Database queries for degree map filtering.
  */
 
-include '../../db.php';
+ //Commented out original include statement and replaced with one that works on dev domain
+//include '../../db.php';
+include '/home/advisingapp/db-dev.php';
 
 //Check if post is sent from ajax call.
 if(isset($_POST['type'])) {

@@ -211,3 +211,14 @@ nav {
     margin-top: 20px;
   }
 }
+
+/****** PRINT SCREEN ******/
+@media print {
+  #contact-us, #course, #degree-form, #degree-resources, #follow-us, #login-modal, #select-text, nav {
+    display: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+}

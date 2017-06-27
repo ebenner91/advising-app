@@ -7,7 +7,7 @@
          responsibility of consulting their advisor for the most current information. All schedules
          are subject to change without notice and do not constitute an agreement between Green River
          College and the student.</p>
-      <p>Please select the degree that you are interested in and the quarter you intend to
+      <p id="select-text">Please select the degree that you are interested in and the quarter you intend to
          start.</p>
     </div>
   </div>
@@ -68,7 +68,7 @@
   </div>
 
   <!--Follow Us-->
-  <div class="row">
+  <div class="row" id="follow-us">
     <div class="col s12 center">
       <h4>Follow Us</h4>
       <!--Social media icons-->
@@ -86,7 +86,7 @@
   </div>
 
   <!--Contact Us-->
-  <div class="row">
+  <div class="row" id="contact-us">
     <div class="col s12 center">
       <h4>Contact Us</h4>
       <ul>
