@@ -214,11 +214,91 @@ nav {
 
 /****** PRINT SCREEN ******/
 @media print {
-  #contact-us, #course, #degree-form, #degree-resources, #follow-us, #login-modal, #select-text, nav {
-    display: none;
+  
+  body {
+    min-height: auto; /* overrides min-height on browser styles which ends up forcing a page-break on print styles */
   }
   
+  /* Adjust html/body height and div widths to better fit print screen */
+  html, body {
+    height: auto !important;
+    max-height: 99% !important;
+  }
+  
+  /* Hide unnecessary details */
+  #course, #degree-form, #degree-resources, #follow-us, footer, #grc-logo, #login-modal, #request-info, #select-text, nav {
+    display: none;
+  }
+
+  /* Set fonts as serif for easier reading on printed pages
+   * Set color to black to save ink for user
+   */
+  body *{
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+  
+  /* Remove underlines from links */
   a {
     text-decoration: none;
+  }
+
+  /* Remove bullets and padding from ul */
+  ul {
+    list-style-type: none;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .card {
+    min-width: 20%;
+    float: left;
+    border: 0.25mm solid gray;
+    margin: 2%;
+  }
+  #contact-us {
+    page-break-inside: avoid;
+    page-break-before: auto;
+  }
+  
+  .degree-season {
+    margin: 0;
+  }
+  
+  .degree-season-heading {
+    text-align: center;
+    padding: 0;
+  }
+  
+  .degree-season-heading h6 {
+    font-size: 15pt;
+    margin: 0;
+  }
+  
+  .no-padding {
+    padding: 0;
+  }
+  
+  .row {
+    clear: both;
+  }
+  
+  .brown.lighten-3 {
+    background-color: #A67D5F !important;
+    -webkit-print-color-adjust: exact; 
+  }
+  
+  .blue.lighten-3 {
+    background-color: #90CAF9 !important;
+    -webkit-print-color-adjust: exact;
+  }
+
+.yellow.lighten-3 {
+    background-color: #fff59d !important;
+    -webkit-print-color-adjust: exact;
+  }
+
+.green.lighten-3 {
+    background-color: #A5D6A7 !important;
+    -webkit-print-color-adjust: exact;
   }
 }

@@ -92,7 +92,7 @@
       <ul>
         <li><a href="tel:2538339111">(253) 833-9111 ext.4600</a></li>
         <li><a href="mailto:itdegrees@greenriver.edu">itdegrees@greenriver.edu</a></li>
-        <li><a href="http://greenriver.edu/it" target="_blank">Request Information</a></li>
+        <li><a href="http://greenriver.edu/it" target="_blank" id="request-info">Request Information</a></li>
       </ul>
     </div>
   </div>
@@ -100,8 +100,8 @@
   <!--College Address-->
   <div class="row">
     <div class="col s12 center">
-      <a href="http://www.greenriver.edu/" target="_blank">
-        <img src="assets/img/green-river-college-logo.jpg" alt="Green River College logo">
+      <a id="grc-logo" href="http://www.greenriver.edu/" target="_blank">
+        <img  src="assets/img/green-river-college-logo.jpg" alt="Green River College logo">
       </a>
       <p><strong>Main Campus:</strong></p>
       <address>
@@ -110,11 +110,13 @@
           Auburn, WA 98092
         </a>
       </address>
-      <p><strong>Kent Station Campus:</strong></p>
+      <p><strong>Auburn Center Campus:</strong></p>
       <address>
-        <a href="https://www.google.com/maps/place/Green+River+Community+College-Kent+Campus/@47.3840959,-122.2356563,17z/data=!4m6!1m3!3m2!1s0x54905bfe4208b423:0xcf6efc0630023899!2sGreen+River+Community+College-Kent+Campus!3m1!1s0x54905bfe4208b423:0xcf6efc0630023899" target="_blank">
-          417 Ramsay Way #112<br>
-          Kent, WA 98032
+        <a
+          href=https://www.google.com/maps/place/Green+River+College+Auburn+Center/@47.3185425,-122.2247615,17z/data=!4m12!1m6!3m5!1s0x5490586042ed8d9d:0xd7d1f0734c75c053!2sGreen+River+College+Auburn+Center!8m2!3d47.3185425!4d-122.2247615!3m4!1s0x5490586042ed8d9d:0xd7d1f0734c75c053!8m2!3d47.3185425!4d-122.2247615"
+          target="_blank">
+          1221 D St NE<br>
+          Auburn, WA 98002
         </a>
       </address>
     </div>
