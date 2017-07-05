@@ -22,3 +22,11 @@
 [13-May-2017 22:16:11 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/advisingapp/public_html/index.php:2) in /home/advisingapp/public_html/index.php on line 2
 [13-May-2017 22:16:11 America/Chicago] PHP Warning:  Unknown: open(/tmp/sess_3bb5d67c1ded3487f6665ce1c603f621, O_RDWR) failed: Permission denied (13) in Unknown on line 0
 [13-May-2017 22:16:11 America/Chicago] PHP Warning:  Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (/tmp) in Unknown on line 0
+[02-Jul-2017 07:10:02 America/Chicago] PHP Warning:  session_start(): open(/tmp/sess_a5f463ed86401cf17abbd3783884438c, O_RDWR) failed: Permission denied (13) in /home/advisingapp/public_html/index.php on line 2
+[02-Jul-2017 07:10:02 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/advisingapp/public_html/index.php:2) in /home/advisingapp/public_html/index.php on line 2
+[02-Jul-2017 07:10:02 America/Chicago] PHP Warning:  Unknown: open(/tmp/sess_a5f463ed86401cf17abbd3783884438c, O_RDWR) failed: Permission denied (13) in Unknown on line 0
+[02-Jul-2017 07:10:02 America/Chicago] PHP Warning:  Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (/tmp) in Unknown on line 0
+[05-Jul-2017 02:27:27 America/Chicago] PHP Warning:  session_start(): open(/tmp/sess_39687e6504318706f96c85cffeb9e619, O_RDWR) failed: Permission denied (13) in /home/advisingapp/public_html/index.php on line 2
+[05-Jul-2017 02:27:27 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/advisingapp/public_html/index.php:2) in /home/advisingapp/public_html/index.php on line 2
+[05-Jul-2017 02:27:28 America/Chicago] PHP Warning:  Unknown: open(/tmp/sess_39687e6504318706f96c85cffeb9e619, O_RDWR) failed: Permission denied (13) in Unknown on line 0
+[05-Jul-2017 02:27:28 America/Chicago] PHP Warning:  Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (/tmp) in Unknown on line 0
