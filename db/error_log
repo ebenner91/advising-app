@@ -1,0 +1,104 @@
+[26-Jun-2017 14:37:43 America/Chicago] PHP Warning:  include(../../db.php): failed to open stream: No such file or directory in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 11
+[26-Jun-2017 14:37:43 America/Chicago] PHP Warning:  include(../../db.php): failed to open stream: No such file or directory in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 11
+[26-Jun-2017 14:37:43 America/Chicago] PHP Warning:  include(): Failed opening '../../db.php' for inclusion (include_path='.:/opt/php70/lib/php') in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 11
+[26-Jun-2017 14:37:43 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function dbConnect() in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php:93
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php(32): getTitle()
+#1 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 93
+[26-Jun-2017 14:39:59 America/Chicago] PHP Warning:  include(../../db.php): failed to open stream: No such file or directory in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 11
+[26-Jun-2017 14:39:59 America/Chicago] PHP Warning:  include(../../db.php): failed to open stream: No such file or directory in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 11
+[26-Jun-2017 14:39:59 America/Chicago] PHP Warning:  include(): Failed opening '../../db.php' for inclusion (include_path='.:/opt/php70/lib/php') in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 11
+[26-Jun-2017 14:39:59 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function dbConnect() in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php:93
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php(32): getTitle()
+#1 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 93
+[27-Jun-2017 12:27:20 America/Chicago] PHP Warning:  include(../../db.php): failed to open stream: No such file or directory in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:20 America/Chicago] PHP Warning:  include(../../db.php): failed to open stream: No such file or directory in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:20 America/Chicago] PHP Warning:  include(): Failed opening '../../db.php' for inclusion (include_path='.:/opt/php70/lib/php') in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:20 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function dbConnect() in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php:112
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(50): autocompleteCourse('%1%')
+#1 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 112
+[27-Jun-2017 12:27:20 America/Chicago] PHP Warning:  include(../../db.php): failed to open stream: No such file or directory in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:20 America/Chicago] PHP Warning:  include(../../db.php): failed to open stream: No such file or directory in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:20 America/Chicago] PHP Warning:  include(): Failed opening '../../db.php' for inclusion (include_path='.:/opt/php70/lib/php') in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:20 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function dbConnect() in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php:112
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(50): autocompleteCourse('%11%')
+#1 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 112
+[27-Jun-2017 12:27:23 America/Chicago] PHP Warning:  include(../../db.php): failed to open stream: No such file or directory in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:23 America/Chicago] PHP Warning:  include(../../db.php): failed to open stream: No such file or directory in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:23 America/Chicago] PHP Warning:  include(): Failed opening '../../db.php' for inclusion (include_path='.:/opt/php70/lib/php') in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:23 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function dbConnect() in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php:112
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(50): autocompleteCourse('%114%')
+#1 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 112
+[27-Jun-2017 12:27:25 America/Chicago] PHP Warning:  include(../../db.php): failed to open stream: No such file or directory in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:25 America/Chicago] PHP Warning:  include(../../db.php): failed to open stream: No such file or directory in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:25 America/Chicago] PHP Warning:  include(): Failed opening '../../db.php' for inclusion (include_path='.:/opt/php70/lib/php') in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:25 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function dbConnect() in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php:112
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(50): autocompleteCourse('%114%')
+#1 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 112
+[27-Jun-2017 12:27:26 America/Chicago] PHP Warning:  include(../../db.php): failed to open stream: No such file or directory in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:26 America/Chicago] PHP Warning:  include(../../db.php): failed to open stream: No such file or directory in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:26 America/Chicago] PHP Warning:  include(): Failed opening '../../db.php' for inclusion (include_path='.:/opt/php70/lib/php') in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:26 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function dbConnect() in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php:112
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(50): autocompleteCourse('%I%')
+#1 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 112
+[27-Jun-2017 12:27:26 America/Chicago] PHP Warning:  include(../../db.php): failed to open stream: No such file or directory in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:26 America/Chicago] PHP Warning:  include(../../db.php): failed to open stream: No such file or directory in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:26 America/Chicago] PHP Warning:  include(): Failed opening '../../db.php' for inclusion (include_path='.:/opt/php70/lib/php') in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:26 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function dbConnect() in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php:112
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(50): autocompleteCourse('%IT%')
+#1 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 112
+[27-Jun-2017 12:27:27 America/Chicago] PHP Warning:  include(../../db.php): failed to open stream: No such file or directory in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:27 America/Chicago] PHP Warning:  include(../../db.php): failed to open stream: No such file or directory in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:27 America/Chicago] PHP Warning:  include(): Failed opening '../../db.php' for inclusion (include_path='.:/opt/php70/lib/php') in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:27 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function dbConnect() in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php:112
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(50): autocompleteCourse('%IT %')
+#1 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 112
+[27-Jun-2017 12:27:28 America/Chicago] PHP Warning:  include(../../db.php): failed to open stream: No such file or directory in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:28 America/Chicago] PHP Warning:  include(../../db.php): failed to open stream: No such file or directory in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:28 America/Chicago] PHP Warning:  include(): Failed opening '../../db.php' for inclusion (include_path='.:/opt/php70/lib/php') in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:28 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function dbConnect() in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php:112
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(50): autocompleteCourse('%IT 1%')
+#1 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 112
+[27-Jun-2017 12:27:28 America/Chicago] PHP Warning:  include(../../db.php): failed to open stream: No such file or directory in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:28 America/Chicago] PHP Warning:  include(../../db.php): failed to open stream: No such file or directory in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:28 America/Chicago] PHP Warning:  include(): Failed opening '../../db.php' for inclusion (include_path='.:/opt/php70/lib/php') in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:28 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function dbConnect() in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php:112
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(50): autocompleteCourse('%IT 11%')
+#1 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 112
+[27-Jun-2017 12:27:28 America/Chicago] PHP Warning:  include(../../db.php): failed to open stream: No such file or directory in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:28 America/Chicago] PHP Warning:  include(../../db.php): failed to open stream: No such file or directory in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:28 America/Chicago] PHP Warning:  include(): Failed opening '../../db.php' for inclusion (include_path='.:/opt/php70/lib/php') in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:28 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function dbConnect() in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php:112
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(50): autocompleteCourse('%IT 114%')
+#1 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 112
+[27-Jun-2017 12:27:30 America/Chicago] PHP Warning:  include(../../db.php): failed to open stream: No such file or directory in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:30 America/Chicago] PHP Warning:  include(../../db.php): failed to open stream: No such file or directory in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:30 America/Chicago] PHP Warning:  include(): Failed opening '../../db.php' for inclusion (include_path='.:/opt/php70/lib/php') in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 11
+[27-Jun-2017 12:27:30 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function dbConnect() in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php:112
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(50): autocompleteCourse('%IT 114%')
+#1 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 112
