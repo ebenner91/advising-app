@@ -10,7 +10,7 @@
 
 //Commenting out original include statement and replacing with one that works on the dev subdomain
 //include '../../db.php';
-include "/home/advisingapp/db.php";
+include "/home/advisingapp/db-dev.php";
 
 //Check if post is sent from ajax call.
 if(isset($_POST['type'])) {
@@ -59,6 +59,17 @@ if(isset($_POST['type'])) {
   }
 }
 
+/**
+ *Function to add a course to the database
+ *
+ *@param String $id the id of the course; a lowercase, non-spaced version of the title (Ex: it102)
+ *@param String $number the course number (Ex: IT 102)
+ *@param String $title the course title (Ex: Programming Fundamentals)
+ *@param String $credit the number of credits to be earned from the ccourse
+ *(Or in the case of BAS Gen Ed, the total number of credits needed)
+ *@param String $prereq prereqs needed before taking the course (May need to alter parameter for new prereq storage)
+ *@param String $description a description of the course
+ */
 function addCourse($id, $number, $title, $credit, $prereq, $description) {
   $sql = 'INSERT INTO course(id, number, title, credit, prereq, description) 
           VALUES (:id, :number, :title, :credit, :prereq, :description)';
@@ -77,6 +88,15 @@ function addCourse($id, $number, $title, $credit, $prereq, $description) {
   echo json_encode(array('status' => 'success'));
 }
 
+/**
+ *Function to update information on a course
+ *
+ *@param String $number the course number
+ *@param String $title the title of the course
+ *@param String $credit the number of credits to be earned from the course
+ *@param String $prereq prereqs needed before taking the course (May need to alter this for the new prereq storage)
+ *@param String $description a description of the course
+ */
 function updateCourse($number, $title, $credit, $prereq, $description) {
   $sql = 'UPDATE course 
           SET number=:number, title=:title, credit=:credit, prereq=:prereq, description=:description 
@@ -95,6 +115,11 @@ function updateCourse($number, $title, $credit, $prereq, $description) {
   echo json_encode(array('status' => 'success'));
 }
 
+/**
+ *Function to delete a course from the database
+ *
+ *@param String $number the course number
+ */
 function deleteCourse($number) {
   $sql = 'DELETE FROM course WHERE number=:number';
   
@@ -107,6 +132,12 @@ function deleteCourse($number) {
   echo json_encode(array('status' => 'success'));
 }
 
+/**
+ *Function to retrieve course info for autocomplete functions
+ *Takes input and returns all courses that could match the given input
+ *
+ *@param String $courseInput input from the course number input field
+ */
 function autocompleteCourse($courseInput) {
   $courses = array();
   $sql = 'SELECT * FROM course WHERE number LIKE (:courseInput)';
@@ -128,6 +159,11 @@ function autocompleteCourse($courseInput) {
   echo json_encode($courses);
 }
 
+/**
+ *Function to retrieve info for a course
+ *
+ *@param $courseNumber the course number for the course the user is looking up
+ */
 function getCourseInfo($courseNumber) {
   $courseInfo = array();
   $sql = 'SELECT * FROM course c WHERE c.number = :courseNumber';
@@ -147,6 +183,22 @@ function getCourseInfo($courseNumber) {
   }
   
   echo json_encode($courseInfo);
+}
+
+/**
+ *Function to retrieve list of possible prereqs
+ */
+function getPrereqOptions() {
+  $courseList = array();
+  $sql = 'SELECT id, number FROM course ORDER BY number';
+  
+  $db = dbConnect();
+  $stmt = $db->prepare($sql);
+  $db = null;
+  $stmt->execute();
+  $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  
+  echo json_encode($result);
 }
 
 ?>

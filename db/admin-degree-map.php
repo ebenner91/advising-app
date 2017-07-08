@@ -10,7 +10,7 @@
 
 //Commenting out original include statement and replacing with one that works on the dev subdomain
 //include '../../db.php';
-include "/home/advisingapp/db.php";
+include "/home/advisingapp/db-dev.php";
 
 //Check if post is sent from ajax call.
 if(isset($_POST['type'])) {
@@ -50,6 +50,16 @@ if(isset($_POST['type'])) {
   }
 }
 
+/**
+ *Function to update the course order in the degree map
+ *
+ *@param String $yearIdFrom the id of the degree year the course is being moved from
+ *@param String $quarterFrom the quarter the course is being moved from
+ *@param String $quarterCoursesFrom the new list of courses for the quarter the course was moved from
+ *@param String $yearIdTo the year the course is being moved to
+ *@param String $quarterTo the quarter the course is being moved to
+ *@param String $quarterCoursesTo the updated list of courses for the quarter the course was moved to
+ */
 function sortCourse($yearIdFrom, $quarterFrom, $quarterCoursesFrom, $yearIdTo, $quarterTo, $quarterCoursesTo) {
   $sqlFrom = "UPDATE year SET $quarterFrom=:quarterCoursesFrom WHERE id=:yearIdFrom";
   $sqlTo = "UPDATE year SET $quarterTo=:quarterCoursesTo WHERE id=:yearIdTo";
@@ -73,6 +83,13 @@ function sortCourse($yearIdFrom, $quarterFrom, $quarterCoursesFrom, $yearIdTo, $
   }
 }
 
+/**
+ *Function to add a course to the degree map
+ *
+ *@param String $courses the updated list of courses for the given quarter
+ *@param String $yearId the id for the degree year being edited
+ *@param String $quarter the quarter being edited
+ */
 function addCourse($courses, $yearId, $quarter) {
   $sql = "UPDATE year SET $quarter=:courses WHERE id=:yearId";
   
@@ -91,6 +108,13 @@ function addCourse($courses, $yearId, $quarter) {
   }
 }
 
+/**
+ *Function to delete a course from the degree map
+ *
+ *@param String $courses the updated list of courses for the given quarter
+ *@param String $yearId the id for the degree year being edited
+ *@param String $quarter the quarter being edited
+ */
 function deleteCourse($courses, $yearId, $quarter) {
   $sql = "UPDATE year SET $quarter=:courses WHERE id=:yearId";
   
