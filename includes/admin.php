@@ -59,8 +59,21 @@
           </div>
           <!--Prereq-->
           <div class="col s12 input-field">
-            <textarea class="validate materialize-textarea" id="admin-input-course-prereq" type="text"/></textarea>
-            <label for="admin-input-course-prereq">Prereq</label>
+            <select multiple class="validate" id="admin-input-course-prereq">
+              <option value="" disabled selected>Select prereqs for this course</option>
+            </select>
+            <label>Prereqs</label>
+          </div>
+          <!-- Quarters -->
+          <div class="col s12 input-field">
+            <select multiple class="validate" id="admin-input-course-quarter">
+              <option value="" disabled selected>Select the quarters this course is offered</option>
+              <option value="FALL">Fall</option>
+              <option value="WINTER">Winter</option>
+              <option value="SPRING">Spring</option>
+              <option value="SUMMER">Summer</option>
+            </select>
+            <label>Quarters Offered</label>
           </div>
           <!--Description-->
           <div class="col s12 input-field">
