@@ -102,3 +102,69 @@ Stack trace:
 #0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(50): autocompleteCourse('%IT 114%')
 #1 {main}
   thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 112
+[13-Jul-2017 15:07:59 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 233
+[13-Jul-2017 15:07:59 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 255
+[13-Jul-2017 15:18:55 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 233
+[13-Jul-2017 15:18:55 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 255
+[13-Jul-2017 15:27:55 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 233
+[13-Jul-2017 15:27:55 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 255
+[13-Jul-2017 15:39:32 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function setAttribute() on null in /home/advisingapp/db-dev.php:16
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php(95): dbConnect()
+#1 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php(34): getTitle()
+#2 {main}
+  thrown in /home/advisingapp/db-dev.php on line 16
+[13-Jul-2017 15:39:32 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function setAttribute() on null in /home/advisingapp/db-dev.php:16
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(211): dbConnect()
+#1 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(59): getPrereqOptions()
+#2 {main}
+  thrown in /home/advisingapp/db-dev.php on line 16
+[13-Jul-2017 15:39:33 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function setAttribute() on null in /home/advisingapp/db-dev.php:16
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php(95): dbConnect()
+#1 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php(34): getTitle()
+#2 {main}
+  thrown in /home/advisingapp/db-dev.php on line 16
+[13-Jul-2017 15:39:41 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function setAttribute() on null in /home/advisingapp/db-dev.php:16
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php(95): dbConnect()
+#1 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php(34): getTitle()
+#2 {main}
+  thrown in /home/advisingapp/db-dev.php on line 16
+[13-Jul-2017 15:39:53 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function setAttribute() on null in /home/advisingapp/db-dev.php:16
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php(95): dbConnect()
+#1 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php(34): getTitle()
+#2 {main}
+  thrown in /home/advisingapp/db-dev.php on line 16
+[13-Jul-2017 15:42:08 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function setAttribute() on null in /home/advisingapp/db-dev.php:16
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php(95): dbConnect()
+#1 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php(34): getTitle()
+#2 {main}
+  thrown in /home/advisingapp/db-dev.php on line 16
+[13-Jul-2017 16:04:26 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`advising_dev`.`prereqs`, CONSTRAINT `prereqs_ibfk_1` FOREIGN KEY (`course_id`) REFERENCES `course` (`id`)) in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php:238
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(238): PDOStatement->execute()
+#1 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(56): addPrereqs('testcourse', Array)
+#2 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 238
+[13-Jul-2017 16:04:26 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`advising_dev`.`quarters`, CONSTRAINT `quarters_ibfk_1` FOREIGN KEY (`course_id`) REFERENCES `course` (`id`)) in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php:262
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(262): PDOStatement->execute()
+#1 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(53): addQuarters('testcourse', Array)
+#2 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 262
+[13-Jul-2017 16:09:10 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`advising_dev`.`quarters`, CONSTRAINT `quarters_ibfk_1` FOREIGN KEY (`course_id`) REFERENCES `course` (`id`)) in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php:262
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(262): PDOStatement->execute()
+#1 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(53): addQuarters('anothertest', Array)
+#2 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 262
+[13-Jul-2017 16:09:10 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`advising_dev`.`prereqs`, CONSTRAINT `prereqs_ibfk_1` FOREIGN KEY (`course_id`) REFERENCES `course` (`id`)) in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php:238
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(238): PDOStatement->execute()
+#1 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(56): addPrereqs('anothertest', Array)
+#2 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 238
