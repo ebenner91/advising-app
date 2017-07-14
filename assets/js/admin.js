@@ -7,47 +7,55 @@
  */
 
 const admin = {
-  isLoggedIn: true,
-  div: {
+  isLoggedIn: true, //Lets degree.js functions know an admin is logged in
+  //Saves div elements into variables
+  div: { 
     adminCollapsible: $('#admin-collapsible'),
     adminFormCourseBtns: $('#admin-form-course-btns'),
     adminInputCourseCredit: $('#admin-input-course-credit'),
     adminInputCourseDescription: $('#admin-input-course-description'),
     adminInputCourseNumber: $('#admin-input-course-number'),
     adminInputCoursePrereq: $('#admin-input-course-prereq'),
+    adminInputCourseQuarter: $('#admin-input-course-quarter'),
+    adminInputCourseTime: $('#admin-input-course-time'),
     adminInputCourseTitle: $('#admin-input-course-title'),
     degreeMap: $('#degree-map'),
-    degreeSeasonCourses: $('.degree-season-courses')
+    degreeSeasonCourses: $('.degree-season-courses'),
+    select: $('select')
   },
-  init: function () {
+  init: function () { //Initialize the admin functions in the app
     // Admin forms to add a degree or course.
-    admin.div.adminCollapsible.collapsible();
-    admin.courseForm.autocomplete();
+    admin.div.adminCollapsible.collapsible(); //Initialize collapsible div
+    admin.courseForm.autocomplete(); //Initialize autocomplete function in course form
+    admin.div.select.material_select(); //Initialize the select inputs using MaterializeCSS
+    admin.courseForm.select.loadPrereqTitles(); //Populate the prereq select with titles from database
 
     // Degree map quarterly courses.
-    admin.course.autocomplete();
-    admin.course.add();
-    admin.course.delete();
+    admin.course.autocomplete(); //Initialize autocomplete in degree map
+    admin.course.add(); //Initialize add course function in degree map
+    admin.course.delete(); //Initialize delete course function in degree map
 
     // Admin course form.
     admin.div.adminFormCourseBtns.on('click', '#admin-btn-add-course', () => {
       admin.courseForm.add(event);
-    });
+    }); //Click handler for add button
     admin.div.adminFormCourseBtns.on('click', '#admin-btn-update-course', () => {
       admin.courseForm.update(event);
-    });
+    }); //Click handler for update button
     admin.div.adminFormCourseBtns.on('click', '#admin-btn-delete-course', () => {
       admin.courseForm.delete(event);
-    });
+    }); //Click handler for delete button
   },
-  course: {
-    autocomplete: function () {
+  course: { //Functions relating to the degree map courses
+    autocomplete: function () { //Autocomplete function for course inputs
       admin.div.degreeMap.on('click', '.admin-new-course-autocomplete', () => {
         $('.admin-new-course-autocomplete').devbridgeAutocomplete({
           autoSelectFirst: true,
           maxHeight: 5000,
           lookup: function (courseInput, done) {
             $.ajax({
+              /* Inform the php script which function we are calling and
+              * pass the course input */
               data: `type=autocompleteCourse&courseInput=${courseInput}`,
               dataType: 'json',
               type: 'POST',
@@ -59,15 +67,15 @@ const admin = {
 
                 done(result);
               },
-              error: function (error) {
-                console.log(`Error: ${error}`);
+              error: function (xhr, status, error) {
+                console.log(xhr.responseText);
               }
             });
           }
         });
       });
     },
-    sort: function () {
+    sort: function () { //Function to allow admin to reorder courses in degree map
       let yearIdFrom;
       let quarterFrom;
       const quarterCoursesFrom = [];
@@ -111,15 +119,15 @@ const admin = {
             dataType: 'json',
             type: 'POST',
             url: 'db/admin-degree-map.php',
-            error: function (error) {
-              console.log(`Error: ${error}`);
+            error: function (xhr, status, error) {
+              console.log(xhr.responseText);
             }
           });
         }
       }).disableSelection();
     },
-    add: function () {
-      admin.div.degreeMap.on('click', '.admin-course-add-btn', function (event) {
+    add: function () { //Adds a course to the map
+      admin.div.degreeMap.on('click', '.admin-course-add-btn', function (event) { //Click handler for add button
         event.preventDefault();
         const coursesAfterAdd = [];
         const newCourseInput = $(this).siblings('.admin-new-course-autocomplete').val();
@@ -141,8 +149,8 @@ const admin = {
           dataType: 'json',
           type: 'POST',
           url: 'db/admin-degree-map.php',
-          error: function (error) {
-            console.log(`Error: ${error}`);
+          error: function (xhr, status, error) {
+            console.log(xhr.responseText);
           }
         });
 
@@ -175,8 +183,8 @@ const admin = {
           dataType: 'json',
           type: 'POST',
           url: 'db/admin-degree-map.php',
-          error: function (error) {
-            console.log(`Error: ${error}`);
+          error: function (xhr, status, error) {
+            console.log(xhr.responseText);
           }
         });
 
@@ -186,6 +194,35 @@ const admin = {
     }
   },
   courseForm: { // Admin course form to add/edit pre-populated courses.
+    //Functions relating to the select inputs
+    select: {
+      //Get prereq titles from the database and populate the prereq select
+      loadPrereqTitles: function () {
+        $.ajax({
+          data: 'type=getPrereqs', //Inform the php script which function we are calling
+          dataType: 'json',
+          type: 'POST', 
+          url: 'db/admin-course-form.php',
+          success: function (prereqTitles) {
+  
+            // Loop through prereq titles and append as select option.
+            for (let i = 0; i < prereqTitles.length; i++) {
+              admin.div.adminInputCoursePrereq.append($('<option/>', {
+                value: prereqTitles[i].id,
+                text: prereqTitles[i].number
+              }));
+            } 
+            $('select').material_select('destroy');
+            $('select').material_select();
+            
+            //console.log(prereqTitles);
+          },
+          error: function (xhr, status, error) {
+            console.log(xhr.responseText);
+          }
+        });
+      }
+    },
     autocomplete: function () {
       admin.div.adminInputCourseNumber.devbridgeAutocomplete({
         autoSelectFirst: true,
@@ -200,8 +237,8 @@ const admin = {
               const result = { suggestions: courses };
               done(result);
             },
-            error: function (error) {
-              console.log(`Error: ${error}`);
+            error: function (xhr, status, error) {
+              console.log(xhr.responseText);
             }
           });
         },
@@ -209,7 +246,6 @@ const admin = {
           // Clear values.
           admin.div.adminInputCourseTitle.val('');
           admin.div.adminInputCourseCredit.val('');
-          admin.div.adminInputCoursePrereq.val('');
           admin.div.adminInputCourseDescription.val('');
 
           admin.div.adminFormCourseBtns.html(
@@ -227,7 +263,7 @@ const admin = {
             success: function (courseInfo) {
               admin.div.adminInputCourseTitle.val(courseInfo.title);
               admin.div.adminInputCourseCredit.val(courseInfo.credit);
-              admin.div.adminInputCoursePrereq.val(courseInfo.prereq);
+              //admin.div.adminInputCoursePrereq.val(courseInfo.prereq);
               admin.div.adminInputCourseDescription.val(courseInfo.description);
               Materialize.updateTextFields();
 
@@ -241,8 +277,8 @@ const admin = {
                 </button>`
               );
             },
-            error: function (error) {
-              console.log(`Error: ${error}`);
+            error: function (xhr, status, error) {
+              console.log(xhr.responseText);
             }
           });
         }
@@ -250,48 +286,85 @@ const admin = {
     },
     add: function (event) {
       event.preventDefault();
-      const number = event.target.form[0].value;
-      const title = event.target.form[1].value;
-      const credit = event.target.form[2].value;
-      const prereq = event.target.form[3].value;
-      const description = event.target.form[4].value;
+      //Editing note: Changed these from event.target.form[<index>].value to admin.div.<element variable>.val()?
+      //const number = event.target.form[0].value;
+      const number = admin.div.adminInputCourseNumber.val();
+     // const title = event.target.form[1].value;
+      const title = admin.div.adminInputCourseTitle.val();
+      //const credit = event.target.form[2].value;
+      const credit = admin.div.adminInputCourseCredit.val();
+      const prereq = admin.div.adminInputCoursePrereq.val();
+      const quarter = admin.div.adminInputCourseQuarter.val();
+      //const description = event.target.form[6].value;
+      const description = admin.div.adminInputCourseDescription.val();
       const id = number.toLowerCase().replace(/\s/g, ''); // Convert to lowercase and strip spaces.
-
+      
+      //Editing note, as-is these three calls may or may not succeed properly due to async. Need to make these sequential
+      //Using nesting/promises
       $.ajax({
         data: `type=addCourse&id=${id}&number=${number}&title=${title}&credit=${credit}
-        &prereq=${prereq}&description=${description}`,
+        &description=${description}`,
         dataType: 'json',
         type: 'POST',
         url: 'db/admin-course-form.php',
-        error: function (error) {
-          console.log(`Error: ${error}`);
+        success: function () {
+          $.ajax({
+            data: `type=addPrereqs&id=${id}&prereqs=${prereq}`,
+            dataType: 'json',
+            type: 'POST',
+            url: 'db/admin-course-form.php',
+            error: function (xhr, status, error) {
+              console.log(xhr.responseText);
+            }
+          });
+         
+          $.ajax({
+           data: `type=addQuarters&id=${id}&quarter=${quarter}`,
+           dataType: 'json',
+           type: 'POST',
+           url: 'db/admin-course-form.php',
+           error: function(xhr, status, error) {
+             console.log(xhr.responseText);
+           }
+          });
+        },
+        error: function (xhr, status, error) {
+          console.log(xhr.responseText);
         }
       });
+     
+      
     },
     update: function (event) {
       event.preventDefault();
-      const number = event.target.form[0].value;
-      const title = event.target.form[1].value;
-      const credit = event.target.form[2].value;
-      const prereq = event.target.form[3].value;
-      const description = event.target.form[4].value;
+      //const number = event.target.form[0].value;
+      const number = admin.div.adminInputCourseNumber.val();
+      //const title = event.target.form[1].value;
+      const title = admin.div.adminInputCourseTitle.val();
+      //const credit = event.target.form[2].value;
+      const credit = admin.div.adminInputCourseCredit.val();
+      const prereq = admin.div.adminInputCoursePrereq.val();
+      const quarter = admin.div.adminInputCourseQuarter.val();
+      //const description = event.target.form[4].value;
+      const description = admin.div.adminInputCourseDescription.val();
 
-      $.ajax({
+      /*$.ajax({
         data: `type=updateCourse&number=${number}&title=${title}&credit=${credit}
         &prereq=${prereq}&description=${description}`,
         dataType: 'json',
         type: 'POST',
         url: 'db/admin-course-form.php',
-        error: function (error) {
-          console.log(`Error: ${error}`);
+        error: function (xhr, status, error) {
+          console.log(xhr.responseText);
         }
-      });
+      }); */
     },
     delete: function (event) {
       event.preventDefault();
-      const number = event.target.form[0].value;
+      //const number = event.target.form[0].value;
+      const number = admin.div.adminInputCourseNumber.val();
 
-      $.ajax({
+      /*$.ajax({
         data: `type=deleteCourse&number=${number}`,
         dataType: 'json',
         type: 'POST',
@@ -303,10 +376,10 @@ const admin = {
           admin.div.adminInputCoursePrereq.val('');
           admin.div.adminInputCourseDescription.val('');
         },
-        error: function (error) {
-          console.log(`Error: ${error}`);
+        error: function (xhr, status, error) {
+          console.log(xhr.responseText);
         }
-      });
+      });*/
     }
   }
 };
