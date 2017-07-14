@@ -18,14 +18,24 @@ if(isset($_POST['type'])) {
   
   // addCourse, updateCourse, deleteCourse
   if(isset($_POST['id']) || isset($_POST['number']) || isset($_POST['title']) || isset($_POST['credit'])
-    || isset($_POST['prereq']) || isset($_POST['description'])
+    || isset($_POST['description'])
   ) {
     $id = $_POST['id'];
     $number = $_POST['number'];
     $title = $_POST['title'];
     $credit = $_POST['credit'];
-    $prereq = $_POST['prereq'];
     $description = $_POST['description'];
+  }
+  
+  // addPrereqs
+  if(isset($_POST['prereqs']) && isset($_POST['id'])) {
+    $prereqs = $_POST['prereqs'];
+    $id = $_POST['id'];
+  }
+  // addQuarters
+  if(isset($_POST['id']) && isset($_POST['quarter'])) {
+    $id = $_POST['id'];
+    $quarters = $_POST['quarter'];
   }
   
   // autocompleteCourse
@@ -39,8 +49,17 @@ if(isset($_POST['type'])) {
   }
   
   switch($type) {
+    case 'addQuarters' :
+      addQuarters($id, $quarters);
+      break;
+    case 'addPrereqs' :
+      addPrereqs($id, $prereqs);
+      break;
+    case 'getPrereqs' :
+      getPrereqOptions();
+      break;
     case 'addCourse' :
-      addCourse($id, $number, $title, $credit, $prereq, $description);
+      addCourse($id, $number, $title, $credit, $description);
       break;
     case 'updateCourse' :
       updateCourse($number, $title, $credit, $prereq, $description);
@@ -65,14 +84,13 @@ if(isset($_POST['type'])) {
  *@param String $id the id of the course; a lowercase, non-spaced version of the title (Ex: it102)
  *@param String $number the course number (Ex: IT 102)
  *@param String $title the course title (Ex: Programming Fundamentals)
- *@param String $credit the number of credits to be earned from the ccourse
+ *@param String $credit the number of credits to be earned from the course
  *(Or in the case of BAS Gen Ed, the total number of credits needed)
- *@param String $prereq prereqs needed before taking the course (May need to alter parameter for new prereq storage)
  *@param String $description a description of the course
  */
-function addCourse($id, $number, $title, $credit, $prereq, $description) {
-  $sql = 'INSERT INTO course(id, number, title, credit, prereq, description) 
-          VALUES (:id, :number, :title, :credit, :prereq, :description)';
+function addCourse($id, $number, $title, $credit, $description) {
+  $sql = 'INSERT INTO course(id, number, title, credit, description) 
+          VALUES (:id, :number, :title, :credit, :description)';
   
   $db = dbConnect();
   $stmt = $db->prepare($sql);
@@ -81,7 +99,6 @@ function addCourse($id, $number, $title, $credit, $prereq, $description) {
   $stmt->bindParam(':number', $number, PDO::PARAM_STR);
   $stmt->bindParam(':title', $title, PDO::PARAM_STR);
   $stmt->bindParam(':credit', $credit, PDO::PARAM_STR);
-  $stmt->bindParam(':prereq', $prereq, PDO::PARAM_STR);
   $stmt->bindParam(':description', $description, PDO::PARAM_STR);
   $stmt->execute();
   
@@ -189,7 +206,6 @@ function getCourseInfo($courseNumber) {
  *Function to retrieve list of possible prereqs
  */
 function getPrereqOptions() {
-  $courseList = array();
   $sql = 'SELECT id, number FROM course ORDER BY number';
   
   $db = dbConnect();
@@ -197,6 +213,92 @@ function getPrereqOptions() {
   $db = null;
   $stmt->execute();
   $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  
+  echo json_encode($result);
+}
+
+/**
+ *Function to associate prereqs with a course
+ *
+ *@param String $course the id for the course
+ *@param Array $prereqs Array of ids for the course prereqs
+ */
+function addPrereqs($course, $prereqs) {
+  $sql = 'INSERT INTO prereqs(course_id, prereq_id) 
+          VALUES (:course_id, :prereq_id)';
+  
+  $prereqs = explode(",", $prereqs);
+  
+  $db = dbConnect();
+  $stmt = $db->prepare($sql);
+  $db = null;
+  foreach($prereqs as $prereq) {
+    $stmt->bindParam(':course_id', $course, PDO::PARAM_STR);
+    $stmt->bindParam(':prereq_id', $prereq, PDO::PARAM_STR);
+    $stmt->execute();
+  }
+  
+  echo json_encode(array('status' => 'success'));
+}
+
+/**
+ *Function to associate quarters offered with a course
+ *
+ *@param String $id the id for the course
+ *@param Array $quarters an array of quarters the course is being offered
+ */
+function addQuarters($id, $quarters) {
+  $sql = 'INSERT INTO quarters(course_id, quarter) 
+          VALUES (:course_id, :quarter)';
+          
+  $quarters = explode(",", $quarters);
+          
+  $db = dbConnect();
+  $stmt = $db->prepare($sql);
+  $db = null;
+  foreach($quarters as $quarter) {
+    $stmt->bindParam(':course_id', $id, PDO::PARAM_STR);
+    $stmt->bindParam(':quarter', $quarter, PDO::PARAM_STR);
+    $stmt->execute();
+  }
+  
+  echo json_encode(array('status' => 'success'));
+}
+
+/*
+ *Function to retrieve all prereqs for a given course
+ *
+ *@param String $courseId the id of the given course
+ */
+function getPrereqsForCourse($courseId) {
+  $sql = 'SELECT prereq_id FROM prereqs WHERE course_id = :course_id';
+  
+  $db = dbConnect();
+  $stmt = $db->prepare($sql);
+  $db = null;
+  $stmt->bindParam(':course_id', $courseId, PDO::PARAM_STR);
+  $stmt->execute();
+  
+  $result = $stmt->fetchAll(PDO::FETCH_COLUMN);
+  
+  echo json_encode($result);
+}
+
+/*
+ *Function to retrieve all quarters offered for a given course
+ *
+ *@param String $courseId the id of the given course
+ */
+function getQuartersForCourse($courseId) {
+  $sql = 'SELECT quarter FROM quarters WHERE course_id = :course_id';
+  
+  $db = dbConnect();
+  $stmt = $db->prepare($sql);
+  $db = null;
+  $stmt->bindParam(':course_id', $courseId, PDO::PARAM_STR);
+  $stmt->execute();
+  
+  $result = $stmt->fetchAll(PDO::FETCH_COLUMN);
   
   echo json_encode($result);
 }
