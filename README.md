@@ -1,4 +1,4 @@
-# advising-app
+# advising-app - advisingapp.greenrivertech.net
 Git repository for GRC Tech Advising App
 
 Database Tables:  
