@@ -168,3 +168,10 @@ Stack trace:
 #1 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(56): addPrereqs('anothertest', Array)
 #2 {main}
   thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 238
+[17-Jul-2017 12:49:06 America/Chicago] PHP Parse error:  syntax error, unexpected 'var' (T_VAR), expecting ';' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 325
+[17-Jul-2017 12:53:45 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`advising_dev`.`prereqs`, CONSTRAINT `prereqs_ibfk_2` FOREIGN KEY (`prereq_id`) REFERENCES `course` (`id`)) in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php:238
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(238): PDOStatement->execute()
+#1 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(56): addPrereqs('testcourse', Array)
+#2 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 238
