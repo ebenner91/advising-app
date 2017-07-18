@@ -17,7 +17,6 @@ const admin = {
     adminInputCourseNumber: $('#admin-input-course-number'),
     adminInputCoursePrereq: $('#admin-input-course-prereq'),
     adminInputCourseQuarter: $('#admin-input-course-quarter'),
-    adminInputCourseTime: $('#admin-input-course-time'),
     adminInputCourseTitle: $('#admin-input-course-title'),
     degreeMap: $('#degree-map'),
     degreeSeasonCourses: $('.degree-season-courses'),
@@ -247,6 +246,10 @@ const admin = {
           admin.div.adminInputCourseTitle.val('');
           admin.div.adminInputCourseCredit.val('');
           admin.div.adminInputCourseDescription.val('');
+          admin.div.adminInputCoursePrereq.val('');
+          admin.div.adminInputCourseQuarter.val('');
+          $('select').material_select('destroy');
+          $('select').material_select();
 
           admin.div.adminFormCourseBtns.html(
             `<button class="col s12 m4 btn-large waves-effect waves-light green darken-4" id="admin-btn-add-course" type="submit">
@@ -263,9 +266,12 @@ const admin = {
             success: function (courseInfo) {
               admin.div.adminInputCourseTitle.val(courseInfo.title);
               admin.div.adminInputCourseCredit.val(courseInfo.credit);
-              //admin.div.adminInputCoursePrereq.val(courseInfo.prereq);
+              admin.div.adminInputCoursePrereq.val(courseInfo.prereqs);
+              admin.div.adminInputCourseQuarter.val(courseInfo.quarters);
               admin.div.adminInputCourseDescription.val(courseInfo.description);
               Materialize.updateTextFields();
+              $('select').material_select('destroy');
+              $('select').material_select();
 
               // Change buttons if course exists.
               admin.div.adminFormCourseBtns.html(
@@ -299,8 +305,6 @@ const admin = {
       const description = admin.div.adminInputCourseDescription.val();
       const id = number.toLowerCase().replace(/\s/g, ''); // Convert to lowercase and strip spaces.
       
-      //Editing note, as-is these three calls may or may not succeed properly due to async. Need to make these sequential
-      //Using nesting/promises
       $.ajax({
         data: `type=addCourse&id=${id}&number=${number}&title=${title}&credit=${credit}
         &description=${description}`,
@@ -348,16 +352,16 @@ const admin = {
       //const description = event.target.form[4].value;
       const description = admin.div.adminInputCourseDescription.val();
 
-      /*$.ajax({
+      $.ajax({
         data: `type=updateCourse&number=${number}&title=${title}&credit=${credit}
-        &prereq=${prereq}&description=${description}`,
+        &description=${description}`,
         dataType: 'json',
         type: 'POST',
         url: 'db/admin-course-form.php',
         error: function (xhr, status, error) {
           console.log(xhr.responseText);
         }
-      }); */
+      }); 
     },
     delete: function (event) {
       event.preventDefault();
