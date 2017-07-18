@@ -132,5 +132,3 @@ function deleteCourse($courses, $yearId, $quarter) {
     echo json_encode(array('status' => 'failed'));
   }
 }
-
-?>
