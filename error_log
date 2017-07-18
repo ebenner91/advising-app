@@ -35,4 +35,41 @@
 [05-Jul-2017 02:27:27 America/Chicago] PHP Warning:  session_start(): open(/tmp/sess_39687e6504318706f96c85cffeb9e619, O_RDWR) failed: Permission denied (13) in /home/advisingapp/public_html/index.php on line 2
 [05-Jul-2017 02:27:27 America/Chicago] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/advisingapp/public_html/index.php:2) in /home/advisingapp/public_html/index.php on line 2
 [05-Jul-2017 02:27:28 America/Chicago] PHP Warning:  Unknown: open(/tmp/sess_39687e6504318706f96c85cffeb9e619, O_RDWR) failed: Permission denied (13) in Unknown on line 0
-[05-Jul-2017 02:27:28 America/Chicago] PHP Warning:  Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (/tmp) in Unknown on line 0
+[05-Jul-2017 02:27:28 America/Chicago] PHP Warning:  Unknown: Failed to write session data (files). Please verify that the current setting of session.save_path is correct (/tmp) in Unknown on line 0[18-Jul-2017 13:19:28 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function getPrereqsForCourse() in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/sandbox.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/sandbox.php on line 7
+[18-Jul-2017 13:29:00 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/sandbox.php on line 17
+[18-Jul-2017 13:29:21 America/Chicago] PHP Parse error:  syntax error, unexpected ':' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/sandbox.php on line 18
+[18-Jul-2017 15:24:40 America/Chicago] PHP Fatal error:  Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 31
+[18-Jul-2017 15:25:53 America/Chicago] PHP Fatal error:  Uncaught Error: Cannot pass parameter 2 by reference in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/sandbox.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/sandbox.php on line 47
+[18-Jul-2017 15:34:27 America/Chicago] PHP Warning:  explode() expects at least 2 parameters, 1 given in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 357
+[18-Jul-2017 15:34:27 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 367
+[18-Jul-2017 15:34:27 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 367
+[18-Jul-2017 15:34:27 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 367
+[18-Jul-2017 15:34:27 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 367
+[18-Jul-2017 15:34:27 America/Chicago] PHP Warning:  implode(): Invalid arguments passed in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 375
+[18-Jul-2017 15:34:27 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`advising_dev`.`prereqs`, CONSTRAINT `prereqs_ibfk_2` FOREIGN KEY (`prereq_id`) REFERENCES `course` (`id`)) in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php:250
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(250): PDOStatement->execute()
+#1 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(376): addPrereqs('testcourse', Array)
+#2 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/sandbox.php(44): updatePrereqs('Test Course', NULL)
+#3 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 250
+[18-Jul-2017 15:35:29 America/Chicago] PHP Warning:  explode() expects parameter 2 to be string, array given in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 357
+[18-Jul-2017 15:35:29 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 367
+[18-Jul-2017 15:35:29 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 367
+[18-Jul-2017 15:35:29 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 367
+[18-Jul-2017 15:35:29 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 367
+[18-Jul-2017 15:35:29 America/Chicago] PHP Warning:  implode(): Invalid arguments passed in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 375
+[18-Jul-2017 15:35:29 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`advising_dev`.`prereqs`, CONSTRAINT `prereqs_ibfk_2` FOREIGN KEY (`prereq_id`) REFERENCES `course` (`id`)) in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php:250
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(250): PDOStatement->execute()
+#1 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(376): addPrereqs('testcourse', Array)
+#2 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/sandbox.php(44): updatePrereqs('Test Course', NULL)
+#3 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 250
+[18-Jul-2017 15:36:13 America/Chicago] PHP Parse error:  syntax error, unexpected 'updatePrereqs' (T_STRING) in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/sandbox.php on line 44
