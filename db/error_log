@@ -175,3 +175,35 @@ Stack trace:
 #1 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(56): addPrereqs('testcourse', Array)
 #2 {main}
   thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 238
+[19-Jul-2017 12:29:42 America/Chicago] PHP Parse error:  syntax error, unexpected '{', expecting ',' or ')' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 21
+[19-Jul-2017 12:29:49 America/Chicago] PHP Parse error:  syntax error, unexpected '{', expecting ',' or ')' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 21
+[19-Jul-2017 12:47:01 America/Chicago] PHP Parse error:  syntax error, unexpected '{', expecting ',' or ')' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 21
+[19-Jul-2017 12:47:09 America/Chicago] PHP Parse error:  syntax error, unexpected '{', expecting ',' or ')' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 21
+[19-Jul-2017 12:47:09 America/Chicago] PHP Parse error:  syntax error, unexpected '{', expecting ',' or ')' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 21
+[19-Jul-2017 12:47:09 America/Chicago] PHP Parse error:  syntax error, unexpected '{', expecting ',' or ')' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 21
+[19-Jul-2017 12:47:11 America/Chicago] PHP Parse error:  syntax error, unexpected '{', expecting ',' or ')' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 21
+[19-Jul-2017 12:47:13 America/Chicago] PHP Parse error:  syntax error, unexpected '{', expecting ',' or ')' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 21
+[19-Jul-2017 12:47:14 America/Chicago] PHP Parse error:  syntax error, unexpected '{', expecting ',' or ')' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 21
+[19-Jul-2017 12:47:14 America/Chicago] PHP Parse error:  syntax error, unexpected '{', expecting ',' or ')' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 21
+[19-Jul-2017 12:47:14 America/Chicago] PHP Parse error:  syntax error, unexpected '{', expecting ',' or ')' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 21
+[19-Jul-2017 12:47:15 America/Chicago] PHP Parse error:  syntax error, unexpected '{', expecting ',' or ')' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 21
+[19-Jul-2017 12:49:36 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php:118
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(118): PDOStatement->execute()
+#1 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(49): updateCourse('Test Course', 'Testing Functio...', '5    \n        ', NULL, NULL, 'Testing course ...')
+#2 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 118
+[19-Jul-2017 12:52:34 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php:118
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(118): PDOStatement->execute()
+#1 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(49): updateCourse('Test Course', 'Testing Functio...', '5    \n        ', NULL, NULL, 'Testing course ...')
+#2 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 118
+[19-Jul-2017 12:55:12 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`advising_dev`.`prereqs`, CONSTRAINT `prereqs_ibfk_2` FOREIGN KEY (`prereq_id`) REFERENCES `course` (`id`)) in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php:242
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(242): PDOStatement->execute()
+#1 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(333): addPrereqs('testcourse', Array)
+#2 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(121): updatePrereqs('Test Course', NULL)
+#3 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(49): updateCourse('Test Course', 'Testing Functio...', '5    \n        ', NULL, NULL, 'Testing course ...')
+#4 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 242
