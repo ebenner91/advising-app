@@ -307,31 +307,10 @@ const admin = {
       
       $.ajax({
         data: `type=addCourse&id=${id}&number=${number}&title=${title}&credit=${credit}
-        &description=${description}`,
+        &prereq=${prereq}&quarter=${quarter}&description=${description}`,
         dataType: 'json',
         type: 'POST',
         url: 'db/admin-course-form.php',
-        success: function () {
-          $.ajax({
-            data: `type=addPrereqs&id=${id}&prereqs=${prereq}`,
-            dataType: 'json',
-            type: 'POST',
-            url: 'db/admin-course-form.php',
-            error: function (xhr, status, error) {
-              console.log(xhr.responseText);
-            }
-          });
-         
-          $.ajax({
-           data: `type=addQuarters&id=${id}&quarter=${quarter}`,
-           dataType: 'json',
-           type: 'POST',
-           url: 'db/admin-course-form.php',
-           error: function(xhr, status, error) {
-             console.log(xhr.responseText);
-           }
-          });
-        },
         error: function (xhr, status, error) {
           console.log(xhr.responseText);
         }
@@ -354,7 +333,7 @@ const admin = {
 
       $.ajax({
         data: `type=updateCourse&number=${number}&title=${title}&credit=${credit}
-        &description=${description}`,
+        &prereq=${prereq}&quarter=${quarter}&description=${description}`,
         dataType: 'json',
         type: 'POST',
         url: 'db/admin-course-form.php',
@@ -367,8 +346,7 @@ const admin = {
       event.preventDefault();
       //const number = event.target.form[0].value;
       const number = admin.div.adminInputCourseNumber.val();
-
-      /*$.ajax({
+      $.ajax({
         data: `type=deleteCourse&number=${number}`,
         dataType: 'json',
         type: 'POST',
@@ -378,12 +356,16 @@ const admin = {
           admin.div.adminInputCourseTitle.val('');
           admin.div.adminInputCourseCredit.val('');
           admin.div.adminInputCoursePrereq.val('');
+          admin.div.adminInputCourseQuarter.val('');
           admin.div.adminInputCourseDescription.val('');
+          $('select').material_select('destroy');
+          $('select').material_select();
+          
         },
         error: function (xhr, status, error) {
           console.log(xhr.responseText);
         }
-      });*/
+      });
     }
   }
 };
