@@ -73,3 +73,40 @@ Stack trace:
 #3 {main}
   thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 250
 [18-Jul-2017 15:36:13 America/Chicago] PHP Parse error:  syntax error, unexpected 'updatePrereqs' (T_STRING) in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/sandbox.php on line 44
+[19-Jul-2017 14:47:55 America/Chicago] PHP Fatal error:  Cannot redeclare dbConnect() (previously declared in /home/advisingapp/db-dev.php:7) in /home/advisingapp/db-dev.php on line 24
+[19-Jul-2017 14:49:11 America/Chicago] PHP Fatal error:  Cannot redeclare addCourse() (previously declared in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php:77) in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 95
+[19-Jul-2017 14:53:02 America/Chicago] PHP Fatal error:  Cannot redeclare addCourse() (previously declared in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php:77) in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 95
+[19-Jul-2017 14:54:12 America/Chicago] PHP Fatal error:  Cannot redeclare addCourse() (previously declared in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php:77) in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 95
+[19-Jul-2017 14:59:00 America/Chicago] PHP Warning:  Illegal string offset 'id' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 165
+[19-Jul-2017 14:59:01 America/Chicago] PHP Warning:  Illegal string offset 'number' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 166
+[19-Jul-2017 14:59:01 America/Chicago] PHP Warning:  Illegal string offset 'title' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 167
+[19-Jul-2017 14:59:01 America/Chicago] PHP Warning:  Illegal string offset 'description' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 168
+[19-Jul-2017 14:59:01 America/Chicago] PHP Warning:  Illegal string offset 'credit' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 169
+[19-Jul-2017 14:59:01 America/Chicago] PHP Warning:  Illegal string offset 'prereq' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 170
+[19-Jul-2017 14:59:01 America/Chicago] PHP Warning:  Illegal string offset 'id' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 165
+[19-Jul-2017 14:59:01 America/Chicago] PHP Warning:  Illegal string offset 'number' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 166
+[19-Jul-2017 14:59:01 America/Chicago] PHP Warning:  Illegal string offset 'title' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 167
+[19-Jul-2017 14:59:01 America/Chicago] PHP Warning:  Illegal string offset 'description' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 168
+[19-Jul-2017 14:59:01 America/Chicago] PHP Warning:  Illegal string offset 'credit' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 169
+[19-Jul-2017 14:59:01 America/Chicago] PHP Warning:  Illegal string offset 'prereq' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 170
+[19-Jul-2017 14:59:01 America/Chicago] PHP Warning:  Illegal string offset 'id' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 165
+[19-Jul-2017 14:59:01 America/Chicago] PHP Warning:  Illegal string offset 'number' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 166
+[19-Jul-2017 14:59:01 America/Chicago] PHP Warning:  Illegal string offset 'title' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 167
+[19-Jul-2017 14:59:01 America/Chicago] PHP Warning:  Illegal string offset 'description' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 168
+[19-Jul-2017 14:59:01 America/Chicago] PHP Warning:  Illegal string offset 'credit' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 169
+[19-Jul-2017 14:59:01 America/Chicago] PHP Warning:  Illegal string offset 'prereq' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 170
+[19-Jul-2017 14:59:01 America/Chicago] PHP Warning:  Illegal string offset 'id' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 165
+[19-Jul-2017 14:59:01 America/Chicago] PHP Warning:  Illegal string offset 'number' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 166
+[19-Jul-2017 14:59:01 America/Chicago] PHP Warning:  Illegal string offset 'title' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 167
+[19-Jul-2017 14:59:01 America/Chicago] PHP Warning:  Illegal string offset 'description' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 168
+[19-Jul-2017 14:59:01 America/Chicago] PHP Warning:  Illegal string offset 'credit' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 169
+[19-Jul-2017 14:59:01 America/Chicago] PHP Warning:  Illegal string offset 'prereq' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 170
+[19-Jul-2017 14:59:01 America/Chicago] PHP Warning:  Illegal string offset 'id' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 165
+[19-Jul-2017 14:59:01 America/Chicago] PHP Warning:  Illegal string offset 'number' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 166
+[19-Jul-2017 14:59:01 America/Chicago] PHP Warning:  Illegal string offset 'title' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 167
+[19-Jul-2017 14:59:01 America/Chicago] PHP Warning:  Illegal string offset 'description' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 168
+[19-Jul-2017 14:59:01 America/Chicago] PHP Warning:  Illegal string offset 'credit' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 169
+[19-Jul-2017 14:59:01 America/Chicago] PHP Warning:  Illegal string offset 'prereq' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 170
+[19-Jul-2017 15:15:05 America/Chicago] PHP Parse error:  syntax error, unexpected ';', expecting ',' or ')' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 163
+[19-Jul-2017 16:18:08 America/Chicago] PHP Parse error:  syntax error, unexpected ';', expecting ',' or ')' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/degree.php on line 166
+[24-Jul-2017 16:19:23 America/Chicago] PHP Parse error:  syntax error, unexpected '/' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/sandbox.php on line 20
