@@ -14,6 +14,7 @@ const degree = {
     courseModalTitle: $('.course-modal-title'),
     courseModalDescription: $('.course-modal-description'),
     courseModalPrereq: $('.course-modal-prereq'),
+    courseModalQuarter: $('.course-modal-quarter'),
     degreeForm: $('#degree-form'),
     degreeMap: $('#degree-map'),
     degreeSelectTitle: $('#degree-select-title'),
@@ -148,7 +149,7 @@ const degree = {
             if (course.credit) {
               credit = ` (${course.credit})`;
             } /* If there is a "credit" value in the course object
-               * save it to the course variable */
+               * save it to the credit variable */
 
             //Create a title String using course number, title, and credits
             const title = `${course.number}: ${course.title}${credit}`; 
@@ -156,8 +157,12 @@ const degree = {
             degree.div.courseModalDescription.html(course.description); //Pass description into the modal
 
             if (course.prereq) {
-              degree.div.courseModalPrereq.html(`Prerequisites: ${course.prereq}`);
+              degree.div.courseModalPrereq.html(`Prerequisites: ${course.prereq} - or instructor permission.`);
             } //If the course has prereqs, pass them into the modal
+            
+            if(course.quarter) {
+              degree.div.courseModalQuarter.html(`Quarters offered: ${course.quarter}`);
+            } //Pass in the quarters offered
           },
           error: function (xhr, status, error) {
             console.log(xhr.responseText);
