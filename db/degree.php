@@ -10,7 +10,9 @@
 
  //Commented out original include statement and replaced with one that works on dev domain
 //include '../../db.php';
-include '/home/advisingapp/db-dev.php';
+include_once '/home/advisingapp/db-dev.php';
+//Include admin-course-form to reuse functions
+include_once 'admin-course-form.php';
 
 //Check if post is sent from ajax call.
 if(isset($_POST['type'])) {
@@ -145,7 +147,7 @@ function getStart($title) {
  * @param $number The course number.
  */
 function getCourse($number) {
-  $sql = 'SELECT c.id, c.number, c.title, c.description, c.credit, c.prereq 
+  $sql = 'SELECT c.id, c.number, c.title, c.description, c.credit 
             FROM course c
             WHERE c.number = :number';
 
@@ -154,17 +156,53 @@ function getCourse($number) {
   $db = null;
   $stmt->bindParam(':number', $number, PDO::PARAM_STR);
   $stmt->execute();
-  $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-  foreach($result as $row) {
-    $course = array();
-    $course['id'] = $row['id'];
-    $course['number'] = $row['number'];
-    $course['title'] = $row['title'];
-    $course['description'] = $row['description'];
-    $course['credit'] = $row['credit'];
-    $course['prereq'] = $row['prereq'];
+  $result = $stmt->fetch(PDO::FETCH_ASSOC);
+  
+  $courseId = getCourseID($number);
+  $prereqs = getPrereqsForCourse($courseId, true);
+  $prereqs = implode(', ', getPrereqNumbers($prereqs));
+  
+  $quarters = getQuartersForCourse($courseId, true);
+  foreach($quarters as &$quarter) {
+    $quarter = ucfirst(strtolower($quarter));
   }
+  
+  $quarters = array_unique($quarters);
+  $quarters = implode(", ", $quarters);
 
+  $course = array();
+  $course['id'] = $result['id'];
+  $course['number'] = $result['number'];
+  $course['title'] = $result['title'];
+  $course['description'] = $result['description'];
+  $course['credit'] = $result['credit'];
+  $course['prereq'] = $prereqs;
+  $course['quarter'] = $quarters;
+  
   echo json_encode($course);
+}
+
+/**
+ *Gets course numbers for prereqs
+ *
+ *@param Array $prereqs Array of course ids
+ */
+function getPrereqNumbers($prereqs) {
+  $sql = "SELECT number FROM course WHERE id = :id";
+  
+  $db = dbConnect();
+  $stmt = $db->prepare($sql);
+  $db = null;
+  
+  $prereqNumbers = array();
+  
+  foreach($prereqs as $prereq) {
+    $stmt->bindParam(':id', $prereq, PDO::PARAM_STR);
+    $stmt->execute();
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    
+    $prereqNumbers[] = $result['number'];
+  }
+  
+  return $prereqNumbers;
 }
