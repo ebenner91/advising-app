@@ -296,13 +296,13 @@ const admin = {
       //const number = event.target.form[0].value;
       const number = admin.div.adminInputCourseNumber.val();
      // const title = event.target.form[1].value;
-      const title = admin.div.adminInputCourseTitle.val();
+      const title = encodeURIComponent(admin.div.adminInputCourseTitle.val());
       //const credit = event.target.form[2].value;
       const credit = admin.div.adminInputCourseCredit.val();
       const prereq = admin.div.adminInputCoursePrereq.val();
       const quarter = admin.div.adminInputCourseQuarter.val();
       //const description = event.target.form[6].value;
-      const description = admin.div.adminInputCourseDescription.val();
+      const description = encodeURIComponent(admin.div.adminInputCourseDescription.val());
       const id = number.toLowerCase().replace(/\s/g, ''); // Convert to lowercase and strip spaces.
       
       $.ajax({
@@ -321,15 +321,15 @@ const admin = {
     update: function (event) {
       event.preventDefault();
       //const number = event.target.form[0].value;
-      const number = admin.div.adminInputCourseNumber.val();
+      const number = encodeURIComponent(admin.div.adminInputCourseNumber.val());
       //const title = event.target.form[1].value;
-      const title = admin.div.adminInputCourseTitle.val();
+      const title = encodeURIComponent(admin.div.adminInputCourseTitle.val());
       //const credit = event.target.form[2].value;
       const credit = admin.div.adminInputCourseCredit.val();
       const prereq = admin.div.adminInputCoursePrereq.val();
       const quarter = admin.div.adminInputCourseQuarter.val();
       //const description = event.target.form[4].value;
-      const description = admin.div.adminInputCourseDescription.val();
+      const description = encodeURIComponent(admin.div.adminInputCourseDescription.val());
 
       $.ajax({
         data: `type=updateCourse&number=${number}&title=${title}&credit=${credit}
