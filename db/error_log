@@ -207,3 +207,62 @@ Stack trace:
 #3 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(49): updateCourse('Test Course', 'Testing Functio...', '5    \n        ', NULL, NULL, 'Testing course ...')
 #4 {main}
   thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 242
+[20-Jul-2017 12:14:11 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`advising_dev`.`prereqs`, CONSTRAINT `prereqs_ibfk_2` FOREIGN KEY (`prereq_id`) REFERENCES `course` (`id`)) in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php:242
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(242): PDOStatement->execute()
+#1 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(92): addPrereqs('test2', Array)
+#2 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(46): addCourse('test2', 'Test 2', 'testing', '5\n        ', '', '', 'Test')
+#3 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 242
+[20-Jul-2017 14:16:45 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test2' for key 'PRIMARY' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php:89
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(89): PDOStatement->execute()
+#1 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(46): addCourse('test2', 'test2', 'fsdv', '5\n        ', 'it100,it101,it1...', 'WINTER,SPRING', 'wrgrf')
+#2 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 89
+[20-Jul-2017 14:16:46 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test2' for key 'PRIMARY' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php:89
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(89): PDOStatement->execute()
+#1 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(46): addCourse('test2', 'test2', 'fsdv', '5\n        ', 'it100,it101,it1...', 'WINTER,SPRING', 'wrgrf')
+#2 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 89
+[20-Jul-2017 15:45:58 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`advising_dev`.`prereqs`, CONSTRAINT `prereqs_ibfk_2` FOREIGN KEY (`prereq_id`) REFERENCES `course` (`id`)) in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php:242
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(242): PDOStatement->execute()
+#1 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(333): addPrereqs('basgened', Array)
+#2 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(121): updatePrereqs('BAS Gen Ed', '')
+#3 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(49): updateCourse('BAS Gen Ed', 'BAS General Edu...', '130\n        ', '', 'FALL,WINTER,SPR...', 'Communications ...')
+#4 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 242
+[20-Jul-2017 16:00:28 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`advising_dev`.`prereqs`, CONSTRAINT `prereqs_ibfk_2` FOREIGN KEY (`prereq_id`) REFERENCES `course` (`id`)) in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php:242
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(242): PDOStatement->execute()
+#1 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(333): addPrereqs('basgened', Array)
+#2 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(121): updatePrereqs('BAS Gen Ed', '')
+#3 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(49): updateCourse('BAS Gen Ed', 'BAS General Edu...', '130\n        ', '', 'FALL,WINTER,SPR...', 'Communications ...')
+#4 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 242
+[20-Jul-2017 19:48:25 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`advising_dev`.`prereqs`, CONSTRAINT `prereqs_ibfk_2` FOREIGN KEY (`prereq_id`) REFERENCES `course` (`id`)) in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php:242
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(242): PDOStatement->execute()
+#1 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(333): addPrereqs('basgened', Array)
+#2 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(121): updatePrereqs('BAS Gen Ed', '')
+#3 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(49): updateCourse('BAS Gen Ed', 'BAS General Edu...', '130  \n        ', '', 'FALL,WINTER,SPR...', 'Communications ...')
+#4 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 242
+[20-Jul-2017 19:51:44 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`advising_dev`.`prereqs`, CONSTRAINT `prereqs_ibfk_2` FOREIGN KEY (`prereq_id`) REFERENCES `course` (`id`)) in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php:244
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(244): PDOStatement->execute()
+#1 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(335): addPrereqs('basgened', Array)
+#2 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(121): updatePrereqs('BAS Gen Ed', '')
+#3 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(49): updateCourse('BAS Gen Ed', 'BAS General Edu...', '130  \n        ', '', 'FALL,WINTER,SPR...', 'Communications ...')
+#4 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 244
+[20-Jul-2017 19:55:11 America/Chicago] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`advising_dev`.`prereqs`, CONSTRAINT `prereqs_ibfk_2` FOREIGN KEY (`prereq_id`) REFERENCES `course` (`id`)) in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php:250
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(250): PDOStatement->execute()
+#1 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(341): addPrereqs('basgened', Array)
+#2 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(126): updatePrereqs('BAS Gen Ed', '')
+#3 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(49): updateCourse('BAS Gen Ed', 'BAS General Edu...', '130  \n        ', '', 'FALL,WINTER,SPR...', 'Communications ...')
+#4 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 250
