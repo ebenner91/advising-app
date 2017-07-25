@@ -10,7 +10,7 @@
 
 //Commenting out original include statement and replacing with one that works on the dev subdomain
 //include '../../db.php';
-include "/home/advisingapp/db-dev.php";
+include_once "/home/advisingapp/db-dev.php";
 
 //Check if post is sent from ajax call.
 if(isset($_POST['type'])) {
@@ -88,8 +88,12 @@ function addCourse($id, $number, $title, $credit, $prereqs, $quarters, $descript
   $stmt->bindParam(':description', $description, PDO::PARAM_STR);
   $stmt->execute();
   
-  addQuarters($id, $quarters);
-  addPrereqs($id, $prereqs);
+  if($quarters != '') {
+    addQuarters($id, $quarters);
+  }
+  if($prereqs != '') {
+    addPrereqs($id, $prereqs);
+  }
   
   echo json_encode(array('status' => 'success'));
 }
@@ -118,8 +122,12 @@ function updateCourse($number, $title, $credit, $prereqs, $quarters, $descriptio
   $stmt->bindParam(':number', $number, PDO::PARAM_STR);
   $stmt->execute();
   
-  updatePrereqs($number, $prereqs);
-  updateQuarters($number, $quarters);
+  if($prereqs != '') {
+    updatePrereqs($number, $prereqs);
+  }
+  if($quarters != '') {
+    updateQuarters($number, $quarters);
+  }
   
   echo json_encode(array('status' => 'success'));
 }
@@ -179,6 +187,7 @@ function autocompleteCourse($courseInput) {
  *@param $courseNumber the course number for the course the user is looking up
  */
 function getCourseInfo($courseNumber) {
+
   $courseInfo = array();
   $sql = 'SELECT * FROM course c WHERE c.number = :courseNumber';
   
