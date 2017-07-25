@@ -129,6 +129,7 @@
     <h5 class="course-modal-title"></h5>
     <p class="course-modal-description"></p>
     <p class="course-modal-prereq"></p>
+    <p class="course-modal-quarter"></p>
   </div>
   <div class="modal-footer">
     <button class="btn modal-action modal-close waves-effect waves-light green" type="submit">CLOSE
