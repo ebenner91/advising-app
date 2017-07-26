@@ -10,7 +10,7 @@
 
 //Commenting out original include statement and replacing with one that works on the dev subdomain
 //include '../../db.php';
-include_once "/home/advisingapp/db-dev.php";
+include_once "/home/advisingapp/db.php";
 
 //Check if post is sent from ajax call.
 if(isset($_POST['type'])) {
