@@ -10,13 +10,13 @@
 
 //Commenting out original include statement and replacing with one that works on the dev subdomain
 //include '../../db.php';
-include "/home/advisingapp/db.php";
+include_once "/home/advisingapp/db-dev.php";
 
 //Check if post is sent from ajax call.
 if(isset($_POST['type'])) {
   $type = $_POST['type'];
   
-  // sortCourse
+  // sortCourseToFrom
   if(isset($_POST['yearIdFrom']) || isset($_POST['quarterFrom']) || isset($_POST['quarterCoursesFrom']) ||
     isset($_POST['yearIdTo']) || isset($_POST['quarterTo']) || isset($_POST['quarterCoursesTo'])
   ) {
@@ -28,7 +28,7 @@ if(isset($_POST['type'])) {
     $quarterCoursesTo = $_POST['quarterCoursesTo'];
   }
   
-  // addCourse, deleteCourse
+  // addCourse, deleteCourse, sortCoursesInQuarter
   if(isset($_POST['courses']) || isset($_POST['yearId']) || isset($_POST['quarter'])) {
     $courses = $_POST['courses'];
     $yearId = $_POST['yearId'];
@@ -36,8 +36,11 @@ if(isset($_POST['type'])) {
   }
   
   switch($type) {
-    case 'sortCourse' :
-      sortCourse($yearIdFrom, $quarterFrom, $quarterCoursesFrom, $yearIdTo, $quarterTo, $quarterCoursesTo);
+    case 'sortCourseInQuarter' :
+      sortCourseInQuarter($yearId, $quarter, $courses);
+      break;
+    case 'sortCourseToFrom' :
+      sortCourseToFrom($yearIdFrom, $quarterFrom, $quarterCoursesFrom, $yearIdTo, $quarterTo, $quarterCoursesTo);
       break;
     case 'addCourse' :
       addCourse($courses, $yearId, $quarter);
@@ -51,7 +54,7 @@ if(isset($_POST['type'])) {
 }
 
 /**
- *Function to update the course order in the degree map
+ *Function to update the course order in the degree map when moving courses from one quarter to another
  *
  *@param String $yearIdFrom the id of the degree year the course is being moved from
  *@param String $quarterFrom the quarter the course is being moved from
@@ -60,7 +63,7 @@ if(isset($_POST['type'])) {
  *@param String $quarterTo the quarter the course is being moved to
  *@param String $quarterCoursesTo the updated list of courses for the quarter the course was moved to
  */
-function sortCourse($yearIdFrom, $quarterFrom, $quarterCoursesFrom, $yearIdTo, $quarterTo, $quarterCoursesTo) {
+function sortCourseToFrom($yearIdFrom, $quarterFrom, $quarterCoursesFrom, $yearIdTo, $quarterTo, $quarterCoursesTo) {
   $sqlFrom = "UPDATE year SET $quarterFrom=:quarterCoursesFrom WHERE id=:yearIdFrom";
   $sqlTo = "UPDATE year SET $quarterTo=:quarterCoursesTo WHERE id=:yearIdTo";
   
@@ -79,6 +82,30 @@ function sortCourse($yearIdFrom, $quarterFrom, $quarterCoursesFrom, $yearIdTo, $
     echo json_encode(array('status' => 'success'));
   }
   else {
+    echo json_encode(array('status' => 'failed'));
+  }
+}
+
+/**
+ *Function to update course ordering within a quarter
+ *
+ *@param String $yearId the id of the degree year the course is being moved within
+ *@param String $quarter the quarter the course is being moved within
+ *@param String $courses the updated list of courses in the quarter
+ */
+function sortCourseInQuarter($yearId, $quarter, $courses) {
+  $sql = "UPDATE year SET $quarter=:courses WHERE id=:yearId";
+  $db = dbConnect();
+  $stmt = $db->prepare($sql);
+  
+  $db = null;
+  $stmt->bindParam(':yearId', $yearId, PDO::PARAM_STR);
+  $stmt->bindParam(':courses', $courses, PDO::PARAM_STR);
+  $update = $stmt->execute();
+  
+  if($update) {
+    echo json_encode(array('status' => 'success'));
+  } else {
     echo json_encode(array('status' => 'failed'));
   }
 }
