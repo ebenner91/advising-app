@@ -10,7 +10,7 @@
 
  //Commented out original include statement and replaced with one that works on dev domain
 //include '../../db.php';
-include_once '/home/advisingapp/db.php';
+include_once '/home/advisingapp/db-dev.php';
 //Include admin-course-form to reuse functions
 include_once 'admin-course-form.php';
 
@@ -164,7 +164,7 @@ function getCourse($number) {
   
   $quarters = getQuartersForCourse($courseId, true);
   foreach($quarters as &$quarter) {
-    $quarter = ucfirst(strtolower($quarter));
+    $quarter = ucfirst($quarter);
   }
   
   $quarters = array_unique($quarters);
