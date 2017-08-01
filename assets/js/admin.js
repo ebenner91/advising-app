@@ -92,36 +92,77 @@ const admin = {
         update: function (event, ui) {
           // Get the From list of quarter courses.
           if (ui.sender) {
+            
             $(ui.sender[0].children).each(function () {
-              // Add courses to quarterCoursesFrom array.
+              // Add courses to quarterCoursesFrom array
               quarterCoursesFrom.push($(this).attr('data-course-number'));
             });
+            // Get year id and quarter data attribute of To div.
+            const yearIdTo = ui.item.parent().parent().parent().parent().parent()
+                               .attr('data-degree-year-id');
+            const quarterTo = ui.item.parent().attr('data-quarter');
+            const quarterCoursesTo = [];
+  
+            // Get the To list of quarter courses.
+            $(ui.item.parent()[0].children).each(function () {
+              // Add courses to quarterCoursesTo array.
+              quarterCoursesTo.push($(this).attr('data-course-number'));
+            });
+  
+            // Save From and To list of quarterly courses.
+            $.ajax({
+              data: `type=sortCourseToFrom&yearIdFrom=${yearIdFrom}&quarterFrom=${quarterFrom}
+              &quarterCoursesFrom=${quarterCoursesFrom}&yearIdTo=${yearIdTo}&quarterTo=${quarterTo}
+              &quarterCoursesTo=${quarterCoursesTo}`,
+              dataType: 'json',
+              type: 'POST',
+              url: 'db/admin-degree-map.php',
+              error: function (xhr, status, error) {
+                console.log(xhr.responseText);
+              }
+            });
+            
+            //clear the arrays
+            quarterCoursesFrom.length = 0;
+            quarterCoursesTo.length = 0;
+          } else {
+            // Get year id and quarter data attribute of quarter div.
+            const yearId = ui.item.parent().parent().parent().parent().parent()
+                               .attr('data-degree-year-id');
+            const quarter = ui.item.parent().attr('data-quarter');
+            const courses = [];
+  
+            // Get the To list of quarter courses.
+            $(ui.item.parent()[0].children).each(function () {
+              // Add courses to quarterCoursesTo array.
+              courses.push($(this).attr('data-course-number'));
+            });
+            
+            $.ajax({
+              data: `type=sortCourseInQuarter&courses=${courses}&yearId=${yearId}&quarter=${quarter}`,
+              dataType: 'json',
+              type: 'POST',
+              url: 'db/admin-degree-map.php',
+              error: function (xhr, status, error) {
+                console.log(xhr.responseText);
+              }
+            });
+          
           }
-
-          // Get year id and quarter data attribute of To div.
-          const yearIdTo = ui.item.parent().parent().parent().parent().parent()
-                             .attr('data-degree-year-id');
-          const quarterTo = ui.item.parent().attr('data-quarter');
-          const quarterCoursesTo = [];
-
-          // Get the To list of quarter courses.
-          $(ui.item.parent()[0].children).each(function () {
-            // Add courses to quarterCoursesTo array.
-            quarterCoursesTo.push($(this).attr('data-course-number'));
-          });
-
-          // Save From and To list of quarterly courses.
+          
+          
+          //Get prereqs for the course that was moved
+          /*const number = ui.item.attr('data-course-number');
           $.ajax({
-            data: `type=sortCourse&yearIdFrom=${yearIdFrom}&quarterFrom=${quarterFrom}
-            &quarterCoursesFrom=${quarterCoursesFrom}&yearIdTo=${yearIdTo}&quarterTo=${quarterTo}
-            &quarterCoursesTo=${quarterCoursesTo}`,
+            data: `type=getCoursePrereqs&number=${number}`,
             dataType: 'json',
             type: 'POST',
-            url: 'db/admin-degree-map.php',
+            url: 'db/admin-course-form.php',
             error: function (xhr, status, error) {
               console.log(xhr.responseText);
             }
           });
+          */
         }
       }).disableSelection();
     },
@@ -294,7 +335,7 @@ const admin = {
       event.preventDefault();
       //Editing note: Changed these from event.target.form[<index>].value to admin.div.<element variable>.val()?
       //const number = event.target.form[0].value;
-      const number = admin.div.adminInputCourseNumber.val();
+      const number = encodeURIComponent(admin.div.adminInputCourseNumber.val());
      // const title = event.target.form[1].value;
       const title = encodeURIComponent(admin.div.adminInputCourseTitle.val());
       //const credit = event.target.form[2].value;
@@ -303,7 +344,8 @@ const admin = {
       const quarter = admin.div.adminInputCourseQuarter.val();
       //const description = event.target.form[6].value;
       const description = encodeURIComponent(admin.div.adminInputCourseDescription.val());
-      const id = number.toLowerCase().replace(/\s/g, ''); // Convert to lowercase and strip spaces.
+      const id = encodeURIComponent(admin.div.adminInputCourseNumber.val().toLowerCase().replace(/\s/g, '')); // Convert to lowercase and strip spaces.
+      
       
       $.ajax({
         data: `type=addCourse&id=${id}&number=${number}&title=${title}&credit=${credit}
