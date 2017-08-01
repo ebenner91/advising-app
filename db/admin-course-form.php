@@ -10,13 +10,13 @@
 
 //Commenting out original include statement and replacing with one that works on the dev subdomain
 //include '../../db.php';
-include_once "/home/advisingapp/db.php";
+include_once "/home/advisingapp/db-dev.php";
 
 //Check if post is sent from ajax call.
 if(isset($_POST['type'])) {
   $type = $_POST['type'];
   
-  // addCourse, updateCourse, deleteCourse, addPrereqs, addQuarters
+  // addCourse, updateCourse, deleteCourse, addPrereqs, addQuarters, getCoursePrereqs
   if(isset($_POST['id']) || isset($_POST['number']) || isset($_POST['title']) || isset($_POST['credit'])
     || isset($_POST['prereq']) || isset($_POST['quarter']) || isset($_POST['description'])) {
     $id = $_POST['id'];
@@ -39,6 +39,10 @@ if(isset($_POST['type'])) {
   }
   
   switch($type) {
+    case 'getCoursePrereqs' :
+      $id = getCourseID($number);
+      getPrereqsForCourse($id);
+      break;
     case 'getPrereqs' :
       getPrereqOptions();
       break;
@@ -417,4 +421,24 @@ function getCourseID($number) {
   $result = $stmt->fetch(PDO::FETCH_ASSOC);
   
   return $result['id'];
+}
+
+/**
+ *Function to retrieve a course number based on the course ID
+ *
+ *@param String $id the id for the course
+ *@return String the course number
+ */
+function getCourseNumber($id) {
+  $sql = "SELECT number FROM course WHERE id = :id";
+  
+  $db = dbConnect();
+  $stmt = $db->prepare($sql);
+  $db = null;
+  $stmt->bindParam(':id', $id, PDO::PARAM_STR);
+  $stmt->execute();
+  
+  $result = $stmt->fetch(PDO::FETCH_ASSOC);
+  
+  return $result['number'];
 }
