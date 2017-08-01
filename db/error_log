@@ -266,3 +266,18 @@ Stack trace:
 #3 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php(49): updateCourse('BAS Gen Ed', 'BAS General Edu...', '130  \n        ', '', 'FALL,WINTER,SPR...', 'Communications ...')
 #4 {main}
   thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-course-form.php on line 250
+[31-Jul-2017 14:31:59 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function bindParam() on null in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-degree-map.php:102
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-degree-map.php(40): sortCourseInQuarter('13', 'summer', 'IT 201')
+#1 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-degree-map.php on line 102
+[31-Jul-2017 14:36:16 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function bindParam() on null in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-degree-map.php:102
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-degree-map.php(40): sortCourseInQuarter('13', 'spring', 'IT 201,IT 236,G...')
+#1 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-degree-map.php on line 102
+[31-Jul-2017 14:37:18 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function bindParam() on null in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-degree-map.php:102
+Stack trace:
+#0 /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-degree-map.php(40): sortCourseInQuarter('13', 'summer', 'IT 201')
+#1 {main}
+  thrown in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-degree-map.php on line 102
