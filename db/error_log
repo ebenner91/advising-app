@@ -404,3 +404,5 @@ Stack trace:
 [18-Aug-2017 13:03:42 America/Chicago] PHP Parse error:  syntax error, unexpected '=' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-degree-map.php on line 255
 [18-Aug-2017 13:03:42 America/Chicago] PHP Parse error:  syntax error, unexpected '=' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-degree-map.php on line 255
 [18-Aug-2017 13:03:42 America/Chicago] PHP Parse error:  syntax error, unexpected '=' in /home/advisingapp/dev.advisingapp.greenrivertech.net/advising-app/db/admin-degree-map.php on line 255
+[24-Aug-2017 12:21:11 America/Chicago] PHP Fatal error:  Cannot redeclare dbConnect() (previously declared in /home/advisingapp/db-dev.php:7) in /home/advisingapp/db.php on line 23
+[24-Aug-2017 12:21:40 America/Chicago] PHP Fatal error:  Cannot redeclare dbConnect() (previously declared in /home/advisingapp/db-dev.php:7) in /home/advisingapp/db.php on line 23
