@@ -160,7 +160,7 @@ function getCourse($number) {
   
   $courseId = getCourseID($number);
   $prereqs = getPrereqsForCourse($courseId, true);
-  $prereqs = implode(', ', getPrereqNumbers($prereqs));
+  $prereqs = implode(', ', $prereqs);
   
   $quarters = getQuartersForCourse($courseId, true);
   foreach($quarters as &$quarter) {
@@ -203,6 +203,5 @@ function getPrereqNumbers($prereqs) {
     
     $prereqNumbers[] = $result['number'];
   }
-  
   return $prereqNumbers;
 }
