@@ -125,6 +125,37 @@ const admin = {
             //clear the arrays
             quarterCoursesFrom.length = 0;
             quarterCoursesTo.length = 0;
+            
+            //Scripts to check for missing prereqs - Still developing
+            /*
+            var degreeId = $("#degree-title").attr("data-degree-id");
+            var course = ui.item.attr("data-course-number");
+            var year = ui.item.closest(".degree-season").attr("data-degree-year");
+            var quarter = ui.item.closest(".degree-season-courses").attr("data-quarter");
+            
+            //Testing checkMissingPrereqs function
+            $.ajax({
+              data: `type=checkMissingPrereqs&degreeId=${degreeId}&course=${course}&year=${year}&quarter=${quarter}`,
+              dataType: 'json',
+              type: 'POST',
+              url: 'db/admin-degree-map.php',
+              success: function(missing) {
+                if(missing.length > 0) {
+                  var message = "Missing prereqs: ";
+                  var prereqList = missing.join(', ');
+                  message += prereqList;
+                  
+                  Materialize.toast(message, 4000);
+                  ui.item.addClass('red');
+                } else {
+                  ui.item.removeClass('red');
+                }
+              },
+              error: function (xhr, status, error) {
+                console.log(xhr.responseText);
+              }
+            });*/
+            
           } else {
             // Get year id and quarter data attribute of quarter div.
             const yearId = ui.item.parent().parent().parent().parent().parent()
@@ -150,19 +181,6 @@ const admin = {
           
           }
           
-          
-          //Get prereqs for the course that was moved
-          /*const number = ui.item.attr('data-course-number');
-          $.ajax({
-            data: `type=getCoursePrereqs&number=${number}`,
-            dataType: 'json',
-            type: 'POST',
-            url: 'db/admin-course-form.php',
-            error: function (xhr, status, error) {
-              console.log(xhr.responseText);
-            }
-          });
-          */
         }
       }).disableSelection();
     },
@@ -219,7 +237,7 @@ const admin = {
         });
 
         $.ajax({
-          data: `type=deleteCourse&courses=${coursesAfterDelete}&yearId=${yearId}&quarter=${quarter}`,
+          data: `type=removeCourse&courses=${coursesAfterDelete}&yearId=${yearId}&quarter=${quarter}`,
           dataType: 'json',
           type: 'POST',
           url: 'db/admin-degree-map.php',
@@ -348,7 +366,7 @@ const admin = {
       
       
       $.ajax({
-        data: `type=addCourse&id=${id}&number=${number}&title=${title}&credit=${credit}
+        data: `type=createCourse&id=${id}&number=${number}&title=${title}&credit=${credit}
         &prereq=${prereq}&quarter=${quarter}&description=${description}`,
         dataType: 'json',
         type: 'POST',
