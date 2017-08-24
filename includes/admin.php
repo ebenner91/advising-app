@@ -68,10 +68,10 @@
           <div class="col s12 input-field">
             <select multiple class="validate" id="admin-input-course-quarter">
               <option value="" disabled selected>Select the quarters this course is offered</option>
-              <option value="FALL">Fall</option>
-              <option value="WINTER">Winter</option>
-              <option value="SPRING">Spring</option>
-              <option value="SUMMER">Summer</option>
+              <option value="fall">Fall</option>
+              <option value="winter">Winter</option>
+              <option value="spring">Spring</option>
+              <option value="summer">Summer</option>
             </select>
             <label>Quarters Offered</label>
           </div>

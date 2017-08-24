@@ -10,13 +10,13 @@
 
 //Commenting out original include statement and replacing with one that works on the dev subdomain
 //include '../../db.php';
-include_once "/home/advisingapp/db.php";
+include_once "/home/advisingapp/db-dev.php";
 
 //Check if post is sent from ajax call.
 if(isset($_POST['type'])) {
   $type = $_POST['type'];
   
-  // addCourse, updateCourse, deleteCourse, addPrereqs, addQuarters
+  // createCourse, updateCourse, deleteCourse, addPrereqs, addQuarters, getCoursePrereqs
   if(isset($_POST['id']) || isset($_POST['number']) || isset($_POST['title']) || isset($_POST['credit'])
     || isset($_POST['prereq']) || isset($_POST['quarter']) || isset($_POST['description'])) {
     $id = $_POST['id'];
@@ -39,11 +39,15 @@ if(isset($_POST['type'])) {
   }
   
   switch($type) {
+    case 'getCoursePrereqs' :
+      $id = getCourseID($number);
+      getPrereqsForCourse($id);
+      break;
     case 'getPrereqs' :
       getPrereqOptions();
       break;
-    case 'addCourse' :
-      addCourse($id, $number, $title, $credit, $prereqs, $quarters, $description);
+    case 'createCourse' :
+      createCourse($id, $number, $title, $credit, $prereqs, $quarters, $description);
       break;
     case 'updateCourse' :
       updateCourse($number, $title, $credit, $prereqs, $quarters, $description);
@@ -74,7 +78,7 @@ if(isset($_POST['type'])) {
  *@param String $quarters The list of quarters the course is offered
  *@param String $description a description of the course
  */
-function addCourse($id, $number, $title, $credit, $prereqs, $quarters, $description) {
+function createCourse($id, $number, $title, $credit, $prereqs, $quarters, $description) {
   $sql = 'INSERT INTO course(id, number, title, credit, description) 
           VALUES (:id, :number, :title, :credit, :description)';
   
@@ -294,6 +298,10 @@ function getPrereqsForCourse($courseId, $return=false) {
   
   $result = $stmt->fetchAll(PDO::FETCH_COLUMN);
   
+  foreach($result as &$prereq) {
+    $prereq = getCourseNumber($prereq);
+  }
+  
   if($return) {
     return $result;
   } else if(!$return) {
@@ -415,6 +423,25 @@ function getCourseID($number) {
   $stmt->execute();
   
   $result = $stmt->fetch(PDO::FETCH_ASSOC);
-  
   return $result['id'];
+}
+
+/**
+ *Function to retrieve a course number based on the course ID
+ *
+ *@param String $id the id for the course
+ *@return String the course number
+ */
+function getCourseNumber($id) {
+  $sql = "SELECT number FROM course WHERE id = :id";
+  
+  $db = dbConnect();
+  $stmt = $db->prepare($sql);
+  $db = null;
+  $stmt->bindParam(':id', $id, PDO::PARAM_STR);
+  $stmt->execute();
+  
+  $result = $stmt->fetch(PDO::FETCH_ASSOC);
+  
+  return $result['number'];
 }
