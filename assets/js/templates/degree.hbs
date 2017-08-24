@@ -16,7 +16,7 @@
     <div class="col s12">
       <h6>Year {{year}}</h6>
     </div>
-    <div class="col s12 m3 degree-season">
+    <div class="col s12 m3 degree-season" data-degree-year="{{year}}">
       <div class="card">
         <div class="degree-season-heading valign-wrapper brown lighten-3">
           <h6 class="valign">FALL</h6>
@@ -61,7 +61,7 @@
         </div>
       </div>
     </div>
-    <div class="col s12 m3 degree-season">
+    <div class="col s12 m3 degree-season" data-degree-year="{{year}}">
       <div class="card">
         <div class="degree-season-heading valign-wrapper blue lighten-3">
           <h6 class="valign">WINTER</h6>
@@ -94,7 +94,7 @@
           {{else}}
             <ul class="degree-season-courses clearfix" data-quarter="winter">
               {{#each winter}}
-                <li class="degree-season-course" data-course-number="{{this}}">
+                <li class="degree-season-course" data-course-number="{{this}}" >
                   <div class="valign-wrapper degree-course">
                     <a href="#course" class="degree-course-modal">{{this}}</a>
                   </div>
@@ -105,7 +105,7 @@
         </div>
       </div>
     </div>
-    <div class="col s12 m3 degree-season">
+    <div class="col s12 m3 degree-season" data-degree-year="{{year}}">
       <div class="card">
         <div class="degree-season-heading valign-wrapper green lighten-3">
           <h6 class="valign">SPRING</h6>
@@ -149,7 +149,7 @@
         </div>
       </div>
     </div>
-    <div class="col s12 m3 degree-season">
+    <div class="col s12 m3 degree-season" data-degree-year="{{year}}">
       <div class="card">
         <div class="degree-season-heading valign-wrapper yellow lighten-3">
           <h6 class="valign">SUMMER</h6>
